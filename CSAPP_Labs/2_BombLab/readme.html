@@ -1,0 +1,1362 @@
+<!DOCTYPE html><html><head>
+      <title>readme</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\gamejun88\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.1\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\gamejun88\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.1\node_modules\@shd101wyy\mume\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h2 class="mume-header" id="bomb-lab%E5%AE%9E%E9%AA%8C%E8%A7%A3%E7%AD%94">Bomb Lab&#x5B9E;&#x9A8C;&#x89E3;&#x7B54;</h2>
+
+<h3 class="mume-header" id="1%E5%AE%9E%E9%AA%8C%E6%A6%82%E8%BF%B0">1.&#x5B9E;&#x9A8C;&#x6982;&#x8FF0;</h3>
+
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;Data Lab&#x5B9E;&#x9A8C;&#x9700;&#x8981;&#x7528;&#x5230;CSAPP_3th&#x7B2C;&#x4E09;&#x7AE0;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6240;&#x4EE5;&#x5B9E;&#x9A8C;&#x4E4B;&#x524D;&#x9700;&#x8981;&#x638C;&#x63E1;&#x7B2C;&#x4E09;&#x7AE0;&#x7684;&#x5404;&#x79CD;&#x77E5;&#x8BC6;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6B21;&#x7684;Bomb Lab&#x5B9E;&#x9A8C;&#x975E;&#x5E38;&#x6709;&#x8DA3;&#xFF0C;&#x5B9E;&#x9A8C;&#x5185;&#x5BB9;&#x662F;&#x8BA9;&#x6211;&#x4EEC;&#x626E;&#x6F14;&#x62C6;&#x5F39;&#x4E13;&#x5BB6;&#xFF0C;&#x7834;&#x89E3;&#x90AA;&#x6076;&#x535A;&#x58EB;&#x7559;&#x4E0B;&#x6765;&#x7684;&#x70B8;&#x5F39;&#x7684;&#x5BC6;&#x7801;&#x3002;<br>
+&#x8FD9;&#x4E2A;&#x70B8;&#x5F39;&#x6709;6&#x5C42;&#x5BC6;&#x7801;&#x4FDD;&#x62A4;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x9010;&#x5C42;&#x8F93;&#x5165;&#x6240;&#x6709;&#x7684;&#x6B63;&#x786E;&#x5BC6;&#x7801;&#x624D;&#x80FD;&#x62C6;&#x9664;&#x70B8;&#x5F39;&#xFF0C;&#x5426;&#x5219;&#x70B8;&#x5F39;&#x5C31;&#x4F1A;&#x7206;&#x70B8;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x70B8;&#x5F39;&#x662F;&#x4E00;&#x4E2A;x86-64&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x672C;&#x6B21;&#x5B9E;&#x9A8C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x8BA9;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x9006;&#x5411;&#x5DE5;&#x7A0B;&#x5206;&#x6790;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5E76;&#x7834;&#x89E3;&#x5176;&#x4E2D;&#x6240;&#x542B;&#x7684;6&#x4E2A;&#x5BC6;&#x7801;&#x3002;<br>
+&#x6240;&#x4EE5;&#xFF0C;&#x4E3A;&#x4E86;&#x5B8C;&#x6210;&#x8FD9;&#x6B21;&#x5B9E;&#x9A8C;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x719F;&#x6089;ATT&#x683C;&#x5F0F;&#x6C47;&#x7F16;&#x7684;&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#xFF0C;&#x5E76;&#x4F1A;&#x4F7F;&#x7528;&#x53CD;&#x6C47;&#x7F16;&#x5DE5;&#x5177;&#x4EE5;&#x53CA;&#x8C03;&#x8BD5;&#x5668;&#x3002;</p>
+<h3 class="mume-header" id="2%E5%AE%9E%E9%AA%8C%E5%87%86%E5%A4%87">2.&#x5B9E;&#x9A8C;&#x51C6;&#x5907;</h3>
+
+<p>&#x672C;&#x6B21;&#x5B9E;&#x9A8C;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x662F;linux&#x7CFB;&#x7EDF;&#x7684;x86-64&#x7684;ATT&#x683C;&#x5F0F;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x540D;&#x79F0;&#x4E3A;<code>bomb</code>&#x3002;<br>
+&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;linux&#x7CFB;&#x7EDF;x86-64&#x73AF;&#x5883;&#x6765;&#x64CD;&#x4F5C;&#x5B9E;&#x9A8C;&#x3002;</p>
+<p>&#x6211;&#x7684;linux&#x7CFB;&#x7EDF;&#x662F;CentOS7.9&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x53CD;&#x6C47;&#x7F16;&#x5DE5;&#x5177;&#x662F;objdump&#xFF0C;&#x8C03;&#x8BD5;&#x5668;&#x662F;gdb&#x3002;<br>
+&#x4EE5;&#x4E0B;&#x662F;&#x57FA;&#x4E8E;&#x4E0A;&#x9762;&#x7684;&#x73AF;&#x5883;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x7684;&#x3002;</p>
+<p>&#x6253;&#x5F00;linux&#x7684;&#x547D;&#x4EE4;&#x884C;&#x7EC8;&#x7AEF;&#xFF0C;&#x8FDB;&#x5165;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5F00;&#x59CB;&#x8FDB;&#x884C;&#x9006;&#x5411;&#x5DE5;&#x7A0B;&#x7834;&#x89E3;&#xFF1A;</p>
+<ol>
+<li>&#x8FDB;&#x884C;&#x53CD;&#x6C47;&#x7F16;&#xFF1A;<br>
+&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;<code>objdump -d bomb</code>&#xFF0C;&#x6B64;&#x65F6;&#x7EC8;&#x7AEF;&#x4F1A;&#x8F93;&#x51FA;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x53CD;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x4E4B;&#x540E;&#x7684;&#x5206;&#x6790;&#x5C31;&#x662F;&#x57FA;&#x4E8E;&#x8FD9;&#x4E9B;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x7684;&#x3002;<br>
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E9B;&#x4EE3;&#x7801;&#x590D;&#x5236;&#x5230;&#x67D0;&#x4E2A;&#x65B0;&#x5EFA;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x65B9;&#x4FBF;&#x4E4B;&#x540E;&#x7684;&#x67E5;&#x627E;&#x4E0E;&#x6807;&#x8BB0;&#x3002;<br>
+<img src="image/2021-07-10-23-01-51.png" alt="disas"></li>
+<li>&#x8FDB;&#x5165;&#x8C03;&#x8BD5;&#xFF1A;<br>
+&#x6211;&#x4EEC;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x7EC8;&#x7AEF;&#x5E76;&#x8FDB;&#x5165;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;<code>gdb bomb</code>&#xFF0C;&#x6B64;&#x65F6;&#x8FDB;&#x5165;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x8C03;&#x8BD5;&#x64CD;&#x4F5C;&#xFF0C;&#x6211;&#x4EEC;&#x4E4B;&#x540E;&#x7684;&#x5404;&#x79CD;&#x5B9E;&#x9A8C;&#x8C03;&#x8BD5;&#x90FD;&#x662F;&#x5728;&#x8FD9;&#x4E0A;&#x9762;&#x8FDB;&#x884C;&#x7684;&#x3002;<br>
+<img src="image/2021-07-10-23-06-07.png" alt="debug"><br>
+&#x4EE5;&#x4E0B;&#x662F;csapp&#x4E00;&#x4E66;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E9B;gdb&#x8C03;&#x8BD5;&#x5668;&#x7684;&#x64CD;&#x4F5C;&#xFF1A;<br>
+<img src="image/2021-07-10-23-08-28.png" alt="gdb"></li>
+<li>&#x5F00;&#x59CB;&#x7834;&#x89E3;&#xFF1A;<br>
+&#x8BE5;&#x7A0B;&#x5E8F;&#x662F;&#x8BA9;&#x6211;&#x4EEC;&#x7528;&#x952E;&#x76D8;&#x6765;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x7684;&#xFF0C;&#x6BCF;&#x5C42;&#x7684;&#x5BC6;&#x7801;&#x662F;&#x5D4C;&#x5957;&#x7684;&#xFF0C;&#x53EA;&#x6709;&#x7834;&#x89E3;&#x4E86;&#x5916;&#x5C42;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x624D;&#x80FD;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x5C42;&#x5BC6;&#x7801;&#x7684;&#x7834;&#x89E3;&#x3002;<br>
+&#x6240;&#x4EE5;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4F1A;&#x6309;&#x7167;&#x4ECE;&#x5916;&#x5230;&#x5185;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x9010;&#x4E2A;&#x5206;&#x6790;&#x5E76;&#x7834;&#x89E3;&#x8FD9;6&#x4E2A;&#x5BC6;&#x7801;&#x3002;</li>
+</ol>
+<h3 class="mume-header" id="3%E8%BF%9B%E8%A1%8C%E7%A0%B4%E8%A7%A3">3.&#x8FDB;&#x884C;&#x7834;&#x89E3;</h3>
+
+<p>&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x8FDB;&#x884C;&#x7834;&#x89E3;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x5BF9;&#x4E8E;&#x7834;&#x89E3;&#x5DE5;&#x4F5C;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x660E;&#x767D;&#x4EE5;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x53CD;&#x6C47;&#x7F16;&#x51FA;&#x6765;&#x7684;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x662F;&#x6211;&#x4EEC;&#x5173;&#x6CE8;&#x7684;&#x91CD;&#x70B9;&#xFF1A;<br>
+&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x901A;&#x5E38;&#x5F88;&#x591A;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x662F;&#x8981;&#x5168;&#x90FD;&#x770B;&#x61C2;&#xFF0C;&#x8981;&#x5B66;&#x4F1A;&#x5728;&#x8FD9;&#x4E9B;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x4E2D;&#x627E;&#x5230;&#x6211;&#x4EEC;&#x6240;&#x9700;&#x8981;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
+<li>&#x5F53;&#x6211;&#x4EEC;&#x5BF9;&#x67D0;&#x4E9B;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x770B;&#x4E0D;&#x61C2;&#xFF0C;&#x6216;&#x8005;&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E9B;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x4E2D;&#x6CA1;&#x6709;&#x6807;&#x8BC6;&#x7684;&#x5730;&#x5740;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8C03;&#x8BD5;&#x5668;&#x5BF9;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#x6765;&#x83B7;&#x53D6;&#x548C;&#x5206;&#x6790;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x3002;</li>
+<li>&#x5206;&#x6790;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6E05;&#x695A;&#x67D0;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x5728;c&#x8BED;&#x8A00;&#x4E2D;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x683C;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8981;&#x5B66;&#x4F1A;&#x5C06;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x7FFB;&#x8BD1;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;&#xFF1A;
+<ul>
+<li>&#x8981;&#x6E05;&#x695A;&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;&#x6240;&#x7528;&#x7684;&#x7F16;&#x8BD1;&#x5668;&#x5C06;&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;&#x8F6C;&#x6362;&#x6210;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x7684;&#x5E38;&#x89C1;&#x5F62;&#x5F0F;&#xFF0C;&#x5982;&#x5224;&#x65AD;&#x8BED;&#x53E5;&#xFF0C;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF0C;&#x6570;&#x7EC4;&#x7B49;&#x8BED;&#x53E5;&#x548C;&#x7ED3;&#x6784;&#x7684;&#x8F6C;&#x6362;&#x5F62;&#x5F0F;&#x3002;</li>
+<li>&#x8981;&#x4F1A;&#x6839;&#x636E;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x540D;&#x79F0;&#x6765;&#x63A8;&#x6D4B;&#x6307;&#x4EE4;&#x7684;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;&#x7684;&#x5C3A;&#x5BF8;&#x6216;&#x8005;&#x521B;&#x5EFA;&#x7684;&#x53D8;&#x91CF;&#x7684;&#x5C3A;&#x5BF8;&#x3002;</li>
+<li>&#x8981;&#x4F1A;&#x6839;&#x636E;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x540D;&#x79F0;&#x6765;&#x63A8;&#x6D4B;&#x51FD;&#x6570;&#x7684;&#x5F62;&#x53C2;&#x4E2A;&#x6570;&#x4E0E;&#x7C7B;&#x578B;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x6C47;&#x7F16;&#x4E2D;&#x7684;&#x6574;&#x6570;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x8868;&#xFF1A;<br>
+<img src="image/2021-07-11-02-10-42.png" alt="reg"></p>
+<hr>
+<p>&#x7834;&#x89E3;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x4E00;&#x4E0B;&#x8BE5;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BD5;&#x4E00;&#x8BD5;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x3002;<br>
+&#x4EE5;&#x4E0B;&#x662F;&#x7A0B;&#x5E8F;&#x5F00;&#x59CB;&#x65F6;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x63D0;&#x793A;&#xFF1A;<br>
+<img src="image/2021-07-11-01-24-46.png" alt="start"></p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x968F;&#x4FBF;&#x8F93;&#x5165;&#x4E00;&#x4E9B;&#x5B57;&#x7B26;&#xFF0C;&#x89C2;&#x5BDF;&#x4E00;&#x4E0B;&#x662F;&#x4EC0;&#x4E48;&#x7ED3;&#x679C;&#xFF1A;<br>
+<img src="image/2021-07-11-01-26-35.png" alt="test"></p>
+<p>&#x7ED3;&#x679C;&#x662F;&#x63D0;&#x793A;&#x70B8;&#x5F39;&#x5DF2;&#x7206;&#x70B8;&#xFF0C;&#x7A0B;&#x5E8F;&#x4E5F;&#x7EC8;&#x6B62;&#x4E86;&#xFF0C;&#x770B;&#x6765;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x8981;&#x8F93;&#x5165;&#x6B63;&#x786E;&#x7684;&#x5BC6;&#x7801;&#x624D;&#x80FD;&#x89E3;&#x9664;&#x70B8;&#x5F39;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x5C31;&#x662F;&#x5404;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x653B;&#x7565;&#xFF1A;</p>
+<h4 class="mume-header" id="31-%E7%AC%AC%E4%B8%80%E5%85%B3">3.1 &#x7B2C;&#x4E00;&#x5173;</h4>
+
+<p>&#x6211;&#x4EEC;&#x5148;&#x5FEB;&#x901F;&#x6D4F;&#x89C8;&#x4E00;&#x4E0B;&#x53CD;&#x6C47;&#x7F16;&#x540E;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x770B;&#x4E00;&#x770B;&#x6709;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x5BF9;&#x5E94;&#x6BCF;&#x4E2A;&#x5BC6;&#x7801;&#x7684;&#x51FD;&#x6570;&#x4EC0;&#x4E48;&#x7684;&#x3002;</p>
+<p>&#x7ECF;&#x6211;&#x4EEC;&#x89C2;&#x5BDF;&#x540E;&#xFF0C;&#x53D1;&#x73B0;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x4E2D;&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x7C7B;&#x4F3C;<code>phase_x</code>&#x7684;&#x51FD;&#x6570;&#x540D;&#x79F0;&#xFF0C;&#x5E76;&#x4E14;&#x5728;<code>main</code>&#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5185;&#x4E5F;&#x80FD;&#x770B;&#x5230;&#x5BF9;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x6307;&#x4EE4;&#x3002;<br>
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x521D;&#x6B65;&#x5224;&#x65AD;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x5C31;&#x662F;&#x7528;&#x6765;&#x5224;&#x65AD;&#x5BF9;&#x5E94;&#x5BC6;&#x7801;&#x662F;&#x5426;&#x6B63;&#x786E;&#x7684;&#x51FD;&#x6570;&#x3002;<br>
+<img src="image/2021-07-10-23-57-10.png" alt="chk"><br>
+<img src="image/2021-07-10-23-57-32.png" alt="chk2"></p>
+<p>&#x4E8E;&#x662F;&#x6211;&#x4EEC;&#x627E;&#x5230;&#x540D;&#x4E3A;<code>phase_1</code>&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">0000000000400ee0 <span class="token operator">&lt;</span>phase_<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span>:
+  400ee0:	<span class="token number">48</span> <span class="token number">83</span> ec 08          	sub    <span class="token variable">$0x8</span>,%rsp
+  400ee4:	be 00 <span class="token number">24</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x402400</span>,%esi
+  400ee9:	e8 4a 04 00 00       	callq  <span class="token number">401338</span> <span class="token operator">&lt;</span>strings_not_equal<span class="token operator">&gt;</span>
+  400eee:	<span class="token number">85</span> c0                	<span class="token builtin class-name">test</span>   %eax,%eax
+  400ef0:	<span class="token number">74</span> 05                	je     400ef7 <span class="token operator">&lt;</span>phase_1+0x1<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span>
+  400ef2:	e8 <span class="token number">43</span> 05 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  400ef7:	<span class="token number">48</span> <span class="token number">83</span> c4 08          	<span class="token function">add</span>    <span class="token variable">$0x8</span>,%rsp
+  400efb:	c3                   	retq   
+</pre><p>&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#x4E86;&#x4E24;&#x4E2A;&#x5176;&#x4ED6;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>strings_not_equal</code>&#xFF0C;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>explode_bomb</code>&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x6211;&#x4EEC;&#x521D;&#x6B65;&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x662F;&#x7528;&#x6765;&#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x7684;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x89E6;&#x53D1;&#x70B8;&#x5F39;&#x7206;&#x70B8;&#x7684;&#x3002;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">0000000000401338 <span class="token operator">&lt;</span>strings_not_equal<span class="token operator">&gt;</span>:
+  <span class="token number">401338</span>:	<span class="token number">41</span> <span class="token number">54</span>                	push   %r12
+  40133a:	<span class="token number">55</span>                   	push   %rbp
+  40133b:	<span class="token number">53</span>                   	push   %rbx
+  40133c:	<span class="token number">48</span> <span class="token number">89</span> fb             	mov    %rdi,%rbx
+  40133f:	<span class="token number">48</span> <span class="token number">89</span> f5             	mov    %rsi,%rbp
+  <span class="token number">401342</span>:	e8 d4 ff ff ff       	callq  40131b <span class="token operator">&lt;</span>string_length<span class="token operator">&gt;</span>
+  <span class="token number">401347</span>:	<span class="token number">41</span> <span class="token number">89</span> c4             	mov    %eax,%r12d
+  40134a:	<span class="token number">48</span> <span class="token number">89</span> ef             	mov    %rbp,%rdi
+  40134d:	e8 c9 ff ff ff       	callq  40131b <span class="token operator">&lt;</span>string_length<span class="token operator">&gt;</span>
+  <span class="token number">401352</span>:	ba 01 00 00 00       	mov    <span class="token variable">$0x1</span>,%edx
+  <span class="token number">401357</span>:	<span class="token number">41</span> <span class="token number">39</span> c4             	<span class="token function">cmp</span>    %eax,%r12d
+  40135a:	<span class="token number">75</span> 3f                	jne    40139b <span class="token operator">&lt;</span>strings_not_equal+0x6<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>
+  40135c:	0f b6 03             	movzbl <span class="token punctuation">(</span>%rbx<span class="token punctuation">)</span>,%eax
+  40135f:	<span class="token number">84</span> c0                	<span class="token builtin class-name">test</span>   %al,%al
+  <span class="token number">401361</span>:	<span class="token number">74</span> <span class="token number">25</span>                	je     <span class="token number">401388</span> <span class="token operator">&lt;</span>strings_not_equal+0x5<span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>
+  <span class="token number">401363</span>:	3a <span class="token number">45</span> 00             	<span class="token function">cmp</span>    0x0<span class="token punctuation">(</span>%rbp<span class="token punctuation">)</span>,%al
+  <span class="token number">401366</span>:	<span class="token number">74</span> 0a                	je     <span class="token number">401372</span> <span class="token operator">&lt;</span>strings_not_equal+0x3a<span class="token operator">&gt;</span> <span class="token comment">#point</span>
+  <span class="token number">401368</span>:	eb <span class="token number">25</span>                	jmp    40138f <span class="token operator">&lt;</span>strings_not_equal+0x5<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span>
+  40136a:	3a <span class="token number">45</span> 00             	<span class="token function">cmp</span>    0x0<span class="token punctuation">(</span>%rbp<span class="token punctuation">)</span>,%al
+  40136d:	0f 1f 00             	nopl   <span class="token punctuation">(</span>%rax<span class="token punctuation">)</span>
+  <span class="token number">401370</span>:	<span class="token number">75</span> <span class="token number">24</span>                	jne    <span class="token number">401396</span> <span class="token operator">&lt;</span>strings_not_equal+0x5e<span class="token operator">&gt;</span>
+  <span class="token number">401372</span>:	<span class="token number">48</span> <span class="token number">83</span> c3 01          	<span class="token function">add</span>    <span class="token variable">$0x1</span>,%rbx
+  <span class="token number">401376</span>:	<span class="token number">48</span> <span class="token number">83</span> c5 01          	<span class="token function">add</span>    <span class="token variable">$0x1</span>,%rbp
+  40137a:	0f b6 03             	movzbl <span class="token punctuation">(</span>%rbx<span class="token punctuation">)</span>,%eax
+  40137d:	<span class="token number">84</span> c0                	<span class="token builtin class-name">test</span>   %al,%al
+  40137f:	<span class="token number">75</span> e9                	jne    40136a <span class="token operator">&lt;</span>strings_not_equal+0x3<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>
+  <span class="token number">401381</span>:	ba 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%edx
+  <span class="token number">401386</span>:	eb <span class="token number">13</span>                	jmp    40139b <span class="token operator">&lt;</span>strings_not_equal+0x6<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>
+  <span class="token number">401388</span>:	ba 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%edx
+  40138d:	eb 0c                	jmp    40139b <span class="token operator">&lt;</span>strings_not_equal+0x6<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>
+  40138f:	ba 01 00 00 00       	mov    <span class="token variable">$0x1</span>,%edx
+  <span class="token number">401394</span>:	eb 05                	jmp    40139b <span class="token operator">&lt;</span>strings_not_equal+0x6<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>
+  <span class="token number">401396</span>:	ba 01 00 00 00       	mov    <span class="token variable">$0x1</span>,%edx
+  40139b:	<span class="token number">89</span> d0                	mov    %edx,%eax
+  40139d:	5b                   	pop    %rbx
+  40139e:	5d                   	pop    %rbp
+  40139f:	<span class="token number">41</span> 5c                	pop    %r12
+  4013a1:	c3                   	retq   
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash">000000000040143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>:
+  40143a:	<span class="token number">48</span> <span class="token number">83</span> ec 08          	sub    <span class="token variable">$0x8</span>,%rsp
+  40143e:	bf a3 <span class="token number">25</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x4025a3</span>,%edi
+  <span class="token number">401443</span>:	e8 c8 f6 ff ff       	callq  400b10 <span class="token operator">&lt;</span>puts@plt<span class="token operator">&gt;</span>
+  <span class="token number">401448</span>:	bf ac <span class="token number">25</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x4025ac</span>,%edi
+  40144d:	e8 be f6 ff ff       	callq  400b10 <span class="token operator">&lt;</span>puts@plt<span class="token operator">&gt;</span>
+  <span class="token number">401452</span>:	bf 08 00 00 00       	mov    <span class="token variable">$0x8</span>,%edi
+  <span class="token number">401457</span>:	e8 c4 f7 ff ff       	callq  400c20 <span class="token operator">&lt;</span>exit@plt<span class="token operator">&gt;</span>
+</pre><h5 class="mume-header" id="311-string_length%E5%87%BD%E6%95%B0">3.11 string_length&#x51FD;&#x6570;</h5>
+
+<p>&#x7ECF;&#x8FC7;&#x5206;&#x6790;<code>strings_not_equal</code>&#x51FD;&#x6570;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x8BE5;&#x51FD;&#x6570;&#x5185;&#x8C03;&#x7528;&#x4E86;&#x540D;&#x4E3A;<code>string_length</code>&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5BF9;&#x5176;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5F62;&#x53C2;&#xFF0C;&#x4E14;&#x4F5C;&#x7528;&#x662F;&#x7ED9;&#x51FA;&#x6240;&#x7ED9;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">000000000040131b <span class="token operator">&lt;</span>string_length<span class="token operator">&gt;</span>:
+  40131b:	<span class="token number">80</span> 3f 00             	cmpb   <span class="token variable">$0x0</span>,<span class="token punctuation">(</span>%rdi<span class="token punctuation">)</span>
+  40131e:	<span class="token number">74</span> <span class="token number">12</span>                	je     <span class="token number">401332</span> <span class="token operator">&lt;</span>string_length+0x1<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span>
+  <span class="token number">401320</span>:	<span class="token number">48</span> <span class="token number">89</span> fa             	mov    %rdi,%rdx
+  <span class="token number">401323</span>:	<span class="token number">48</span> <span class="token number">83</span> c2 01          	<span class="token function">add</span>    <span class="token variable">$0x1</span>,%rdx
+  <span class="token number">401327</span>:	<span class="token number">89</span> d0                	mov    %edx,%eax
+  <span class="token number">401329</span>:	<span class="token number">29</span> f8                	sub    %edi,%eax
+  40132b:	<span class="token number">80</span> 3a 00             	cmpb   <span class="token variable">$0x0</span>,<span class="token punctuation">(</span>%rdx<span class="token punctuation">)</span>
+  40132e:	<span class="token number">75</span> f3                	jne    <span class="token number">401323</span> <span class="token operator">&lt;</span>string_length+0x<span class="token operator"><span class="token file-descriptor important">8</span>&gt;</span>
+  <span class="token number">401330</span>:	f3 c3                	repz retq 
+  <span class="token number">401332</span>:	b8 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%eax
+  <span class="token number">401337</span>:	c3                   	retq   
+</pre><p>&#x6240;&#x4EE5;<code>string_length</code>&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token keyword keyword-int">int</span> <span class="token function">string_length</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x5F53;&#x5B57;&#x7B26;&#x4E32;&#x4E3A;&#x7A7A;&#x65F6;&#x8FD4;&#x56DE;0</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>str <span class="token operator">==</span> <span class="token string">&apos;\0&apos;</span><span class="token punctuation">)</span> 
+        <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x5F53;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B57;&#x7B26;&#x6570;&#x91CF;(&#x4E0D;&#x5305;&#x62EC;&#x7A7A;&#x5B57;&#x7B26;)</span>
+    <span class="token keyword keyword-else">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>inc <span class="token operator">=</span> str<span class="token punctuation">;</span>
+        <span class="token keyword keyword-do">do</span>
+            inc <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span><span class="token operator">*</span>inc <span class="token operator">!=</span> <span class="token string">&apos;\0&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-return">return</span> inc <span class="token operator">-</span> str<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h5 class="mume-header" id="312-strings_not_equal%E5%87%BD%E6%95%B0">3.12 strings_not_equal&#x51FD;&#x6570;</h5>
+
+<p>&#x7ECF;&#x8FC7;&#x5206;&#x6790;<code>strings_not_equal</code>&#x51FD;&#x6570;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x8BE5;&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x542B;&#x6709;&#x4E24;&#x4E2A;&#x5F62;&#x53C2;&#xFF0C;&#x4E14;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x76F8;&#x7B49;&#x3002;</p>
+<p>&#x6240;&#x4EE5;<code>strings_not_equal</code>&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token keyword keyword-int">int</span> <span class="token function">strings_not_equal</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>str<span class="token punctuation">,</span> <span class="token keyword keyword-char">char</span><span class="token operator">*</span> code_str<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;</span>
+    <span class="token keyword keyword-int">int</span> decode_str_len <span class="token operator">=</span> <span class="token function">string_length</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> code_str_len<span class="token operator">=</span> <span class="token function">string_length</span><span class="token punctuation">(</span>code_str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x957F;&#x5EA6;&#x4E0D;&#x76F8;&#x7B49;&#x8FD4;&#x56DE;1</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>decode_str_len <span class="token operator">!=</span> code_str_len<span class="token punctuation">)</span> 
+        <span class="token keyword keyword-return">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x5BC6;&#x7801;&#x4E3A;&#x7A7A;&#x65F6;&#x8FD4;&#x56DE;0</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>str <span class="token operator">==</span> <span class="token string">&apos;\0&apos;</span><span class="token punctuation">)</span> 
+        <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5FC5;&#x987B;&#x8981;&#x76F8;&#x7B49;&#x624D;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;1</span>
+    <span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>str <span class="token operator">==</span> <span class="token operator">*</span>code_str<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>temp_dec <span class="token operator">=</span> str<span class="token punctuation">;</span>
+        <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>temp_cod <span class="token operator">=</span> code_str<span class="token punctuation">;</span>
+        <span class="token keyword keyword-do">do</span>
+        <span class="token punctuation">{</span>
+            temp_dec <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            temp_cod <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span><span class="token operator">*</span>temp_dec <span class="token operator">!=</span> <span class="token string">&apos;\0&apos;</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">*</span>temp_dec <span class="token operator">==</span> <span class="token operator">*</span>temp_cod<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>temp_dec <span class="token operator">==</span> <span class="token string">&apos;\0&apos;</span><span class="token punctuation">)</span> 
+            <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-else">else</span> 
+            <span class="token keyword keyword-return">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-else">else</span> 
+        <span class="token keyword keyword-return">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h5 class="mume-header" id="313-phase_1%E5%87%BD%E6%95%B0">3.13 phase_1&#x51FD;&#x6570;</h5>
+
+<p>&#x7ECF;&#x8FC7;&#x5206;&#x6790;<code>phase_1</code>&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;<code>phase_1</code>&#x51FD;&#x6570;&#x901A;&#x8FC7;&#x8C03;&#x7528;<code>strings_not_equal</code>&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x89E6;&#x53D1;&#x70B8;&#x5F39;&#x3002;</p>
+<p><code>phase_1</code>&#x51FD;&#x6570;&#x8C03;&#x7528;<code>strings_not_equal</code>&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#x5E94;&#x8BE5;&#x662F;&#x6211;&#x4EEC;&#x6240;&#x8F93;&#x5165;&#x7684;&#x5BC6;&#x7801;&#x5B57;&#x7B26;&#x4E32;&#xFF1B;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B9E;&#x53C2;&#x5E94;&#x8BE5;&#x662F;&#x8FD9;&#x4E00;&#x5173;&#x7684;&#x771F;&#x6B63;&#x5BC6;&#x7801;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E0D;&#x8FC7;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x53EA;&#x6709;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E00;&#x4E2A;&#x8D77;&#x59CB;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x8C03;&#x8BD5;&#x5668;&#x6765;&#x63A2;&#x67E5;&#x8FD9;&#x4E2A;&#x5185;&#x5B58;&#x5730;&#x5740;&#x6240;&#x5B58;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x4EC0;&#x4E48;&#xFF1A;</p>
+<ol>
+<li>&#x6211;&#x4EEC;&#x5728;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#x91CC;&#x8F93;&#x5165;<code>print/c *0x402400</code>&#x6765;&#x67E5;&#x8BE2;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x7B26;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x6B64;&#x65F6;&#x7EC8;&#x7AEF;&#x5E94;&#x8BE5;&#x51FA;&#x73B0;&#x4E86;&#x8BE5;&#x5730;&#x5740;&#x6240;&#x542B;&#x7684;&#x5B57;&#x7B26;&#x3002;</li>
+<li>&#x63A5;&#x4E0B;&#x6765;&#x5C06;&#x4ECE;&#x4F4E;&#x5730;&#x5740;&#x5230;&#x9AD8;&#x5730;&#x5740;&#x9010;&#x4E2A;&#x91CD;&#x590D;&#x4E4B;&#x524D;&#x7684;&#x6307;&#x4EE4;&#xFF0C;&#x76F4;&#x5230;&#x7EC8;&#x7AEF;&#x51FA;&#x73B0;&#x4E86;&#x5B57;&#x7B26;<code>\0</code>&#xFF0C;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x6240;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5C31;&#x662F;&#x8FD9;&#x4E00;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x3002;<br>
+<img src="image/2021-07-11-01-09-40.png" alt="prt"></li>
+</ol>
+<p>&#x6240;&#x4EE5;<code>phase_1</code>&#x548C;<code>explode_bomb</code>&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token keyword keyword-void">void</span> <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;BOOM!!!\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;The bomb has blown up.\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-void">void</span> <span class="token function">phase_1</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x771F;&#x6B63;&#x7684;&#x5BC6;&#x7801;</span>
+    <span class="token comment">// *0x402400</span>
+    <span class="token keyword keyword-char">char</span> codes<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;Border relations with Canada have never been better.&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x5BC6;&#x7801;&#x4E0D;&#x76F8;&#x7B49;&#x5C31;&#x89E6;&#x53D1;&#x70B8;&#x5F39;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">strings_not_equal</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> codes<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h5 class="mume-header" id="314-%E7%AC%AC%E4%B8%80%E5%85%B3%E5%AF%86%E7%A0%81">3.14 &#x7B2C;&#x4E00;&#x5173;&#x5BC6;&#x7801;</h5>
+
+<p>&#x7EFC;&#x4E0A;&#xFF0C;&#x7B2C;&#x4E00;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x4E3A;<br>
+<code>Border relations with Canada have never been better.</code></p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x901A;&#x8FC7;&#x7B2C;&#x4E00;&#x5173;&#x7684;&#x63D0;&#x793A;&#xFF1A;<br>
+<img src="image/2021-07-11-01-20-49.png" alt="pass1"></p>
+<h4 class="mume-header" id="32-%E7%AC%AC%E4%BA%8C%E5%85%B3">3.2 &#x7B2C;&#x4E8C;&#x5173;</h4>
+
+<p>&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x591A;&#x6B21;&#x8FD0;&#x884C;&#x8BE5;&#x7A0B;&#x5E8F;&#xFF0C;&#x6240;&#x4EE5;&#x4E3A;&#x4E86;&#x51CF;&#x5C11;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x8BE5;&#x7A0B;&#x5E8F;&#x652F;&#x6301;&#x6211;&#x4EEC;&#x5C06;&#x4E4B;&#x524D;&#x6240;&#x89E3;&#x7684;&#x5BC6;&#x7801;&#x5199;&#x5165;&#x5230;&#x67D0;&#x4E2A;&#x65B0;&#x5EFA;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5E76;&#x5728;&#x8FD0;&#x884C;&#x8BE5;&#x7A0B;&#x5E8F;&#x65F6;&#x63D0;&#x4F9B;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x7528;&#x6BCF;&#x6B21;&#x8FD0;&#x884C;&#x65F6;&#x90FD;&#x8981;&#x91CD;&#x65B0;&#x8F93;&#x5165;&#x4E4B;&#x524D;&#x7684;&#x5BC6;&#x7801;&#x4E86;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x63D0;&#x4F9B;&#x5BC6;&#x7801;&#x7684;&#x8FD0;&#x884C;&#x64CD;&#x4F5C;(&#x5BC6;&#x7801;&#x653E;&#x5728;&#x8BE5;&#x7A0B;&#x5E8F;&#x540C;&#x76EE;&#x5F55;&#x7684;<code>enc</code>&#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E2D;)&#xFF1A;<br>
+<img src="image/2021-07-11-01-38-43.png" alt="man"><br>
+<img src="image/2021-07-11-01-40-21.png" alt="file"></p>
+<hr>
+<p>&#x548C;&#x7B2C;&#x4E00;&#x5173;&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;<code>phase_2</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x5176;&#x4E2D;&#x8C03;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>read_six_numbers</code>&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x542C;&#x540D;&#x5B57;&#x5E94;&#x8BE5;&#x662F;&#x8BFB;&#x53D6;6&#x4E2A;&#x6570;&#x5B57;&#x7684;&#x3002;</p>
+<h5 class="mume-header" id="321-read_six_numbers%E5%87%BD%E6%95%B0">3.21 read_six_numbers&#x51FD;&#x6570;</h5>
+
+<p>&#x4E8E;&#x662F;&#x6211;&#x4EEC;&#x627E;&#x5230;&#x540D;&#x4E3A;<code>read_six_numbers</code>&#x7684;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">000000000040145c <span class="token operator">&lt;</span>read_six_numbers<span class="token operator">&gt;</span>:
+  40145c:	<span class="token number">48</span> <span class="token number">83</span> ec <span class="token number">18</span>          	sub    <span class="token variable">$0x18</span>,%rsp
+  <span class="token number">401460</span>:	<span class="token number">48</span> <span class="token number">89</span> f2             	mov    %rsi,%rdx
+  <span class="token number">401463</span>:	<span class="token number">48</span> 8d 4e 04          	lea    0x4<span class="token punctuation">(</span>%rsi<span class="token punctuation">)</span>,%rcx
+  <span class="token number">401467</span>:	<span class="token number">48</span> 8d <span class="token number">46</span> <span class="token number">14</span>          	lea    0x14<span class="token punctuation">(</span>%rsi<span class="token punctuation">)</span>,%rax
+  40146b:	<span class="token number">48</span> <span class="token number">89</span> <span class="token number">44</span> <span class="token number">24</span> 08       	mov    %rax,0x8<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>
+  <span class="token number">401470</span>:	<span class="token number">48</span> 8d <span class="token number">46</span> <span class="token number">10</span>          	lea    0x10<span class="token punctuation">(</span>%rsi<span class="token punctuation">)</span>,%rax
+  <span class="token number">401474</span>:	<span class="token number">48</span> <span class="token number">89</span> 04 <span class="token number">24</span>          	mov    %rax,<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>
+  <span class="token number">401478</span>:	4c 8d 4e 0c          	lea    0xc<span class="token punctuation">(</span>%rsi<span class="token punctuation">)</span>,%r9
+  40147c:	4c 8d <span class="token number">46</span> 08          	lea    0x8<span class="token punctuation">(</span>%rsi<span class="token punctuation">)</span>,%r8
+  <span class="token number">401480</span>:	be c3 <span class="token number">25</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x4025c3</span>,%esi
+  <span class="token number">401485</span>:	b8 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%eax
+  40148a:	e8 <span class="token number">61</span> f7 ff ff       	callq  400bf0 <span class="token operator">&lt;</span>__isoc99_sscanf@plt<span class="token operator">&gt;</span>
+  40148f:	<span class="token number">83</span> f8 05             	<span class="token function">cmp</span>    <span class="token variable">$0x5</span>,%eax
+  <span class="token number">401492</span>:	7f 05                	jg     <span class="token number">401499</span> <span class="token operator">&lt;</span>read_six_numbers+0x3d<span class="token operator">&gt;</span>
+  <span class="token number">401494</span>:	e8 a1 ff ff ff       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  <span class="token number">401499</span>:	<span class="token number">48</span> <span class="token number">83</span> c4 <span class="token number">18</span>          	<span class="token function">add</span>    <span class="token variable">$0x18</span>,%rsp
+  40149d:	c3                   	retq     
+</pre><p>&#x5BF9;&#x5176;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x8C03;&#x7528;<code>sscanf</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x8BFB;&#x53D6;&#xFF0C;&#x4E14;&#x5224;&#x65AD;&#x5176;&#x5E94;&#x8BE5;&#x6709;&#x4E24;&#x4E2A;&#x5F62;&#x53C2;&#xFF0C;&#x4E00;&#x4E2A;&#x5F62;&#x53C2;&#x4E3A;&#x5B57;&#x7B26;&#x6307;&#x9488;&#xFF0C;&#x7528;&#x4E8E;&#x8BFB;&#x53D6;&#xFF1B;&#x53E6;&#x4E00;&#x4E2A;&#x5F62;&#x53C2;&#x4E3A;int&#x578B;&#x6307;&#x9488;&#xFF0C;&#x8BE5;&#x6307;&#x9488;&#x6307;&#x5411;&#x4E00;&#x4E2A;int&#x6570;&#x7EC4;&#xFF0C;&#x7528;&#x4E8E;&#x5C06;&#x8BFB;&#x53D6;&#x7684;&#x503C;&#x5199;&#x5165;&#x5230;&#x8BE5;int&#x6570;&#x7EC4;&#x4E2D;&#x3002;</p>
+<p>&#x89C2;&#x5BDF;&#x8BE5;&#x51FD;&#x6570;&#x4EE5;&#x53CA;&#x5176;&#x540D;&#x5B57;&#xFF0C;&#x5E94;&#x8BE5;&#x662F;&#x8981;&#x5199;&#x5165;6&#x4E2A;&#x503C;&#x5230;&#x53D8;&#x91CF;&#x4E2D;&#xFF0C;&#x4F46;&#x662F;&#x6C47;&#x7F16;&#x4E2D;&#x7684;<code>sscanf</code>&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x8D77;&#x59CB;&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x8981;&#x7528;&#x8C03;&#x8BD5;&#x5668;&#x67E5;&#x6E05;&#x5230;&#x5E95;&#x8BE5;&#x4F20;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x3002;<br>
+&#x548C;&#x4E4B;&#x524D;&#x4E00;&#x6837;&#xFF0C;&#x8F93;&#x5165;&#x5BF9;&#x5E94;&#x6307;&#x4EE4;&#x5C31;&#x80FD;&#x77E5;&#x9053;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x7B26;&#x3002;<br>
+<img src="image/2021-07-11-02-18-02.png" alt="str2"></p>
+<p>&#x6240;&#x4EE5;<code>read_six_numbers</code>&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token keyword keyword-void">void</span> <span class="token function">read_six_numbers</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span><span class="token operator">*</span> str<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>top<span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x50A8;&#x5B58;int&#x6307;&#x9488;&#x7684;&#x6570;&#x7EC4;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>int_ptrs<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x4F20;&#x5165;&#x7684;int&#x6307;&#x9488;&#xFF0C;&#x6307;&#x5411;int&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;</span>
+    <span class="token comment">// &#x7B2C;1&#x4E2A;&#x5199;&#x5165;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>rd <span class="token operator">=</span> top<span class="token punctuation">;</span>
+    <span class="token comment">// &#x7B2C;2&#x4E2A;&#x5199;&#x5165;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>rc <span class="token operator">=</span> top <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7B2C;6&#x4E2A;&#x5199;&#x5165;</span>
+    int_ptrs<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> top <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7B2C;5&#x4E2A;&#x5199;&#x5165;</span>
+    int_ptrs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> top <span class="token operator">+</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7B2C;4&#x4E2A;&#x5199;&#x5165;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>r9 <span class="token operator">=</span> top <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7B2C;3&#x4E2A;&#x5199;&#x5165;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>r8 <span class="token operator">=</span> top <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;</span>
+    <span class="token comment">// *0x4025c3</span>
+    <span class="token keyword keyword-char">char</span><span class="token operator">*</span> formats <span class="token operator">=</span> <span class="token string">&quot;%d %d %d %d %d %d&quot;</span><span class="token punctuation">;</span> 
+    <span class="token comment">// &#x5F53;&#x8BFB;&#x53D6;&#x7684;&#x5339;&#x914D;&#x683C;&#x5F0F;&#x7684;&#x5B57;&#x7B26;&#x6570;&#x91CF;&#x5C0F;&#x4E8E;6&#x65F6;&#xFF0C;&#x89E6;&#x53D1;&#x70B8;&#x5F39;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">sscanf</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> formats<span class="token punctuation">,</span> rd<span class="token punctuation">,</span> rc<span class="token punctuation">,</span> r8<span class="token punctuation">,</span> r9<span class="token punctuation">,</span> int_ptrs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> int_ptrs<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">5</span><span class="token punctuation">)</span>
+        <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h5 class="mume-header" id="322-phase_2%E5%87%BD%E6%95%B0">3.22 phase_2&#x51FD;&#x6570;</h5>
+
+<p>&#x7ECF;&#x8FC7;&#x5206;&#x6790;<code>phase_2</code>&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x73B0;<code>phase_2</code>&#x51FD;&#x6570;&#x5148;&#x8C03;&#x7528;<code>read_six_numbers</code>&#x51FD;&#x6570;&#x6765;&#x8BFB;&#x53D6;6&#x4E2A;&#x6574;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x7528;&#x8FD9;&#x4E9B;&#x503C;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x89E6;&#x53D1;&#x70B8;&#x5F39;&#x3002;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">0000000000400efc <span class="token operator">&lt;</span>phase_<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>:
+  400efc:	<span class="token number">55</span>                   	push   %rbp
+  400efd:	<span class="token number">53</span>                   	push   %rbx
+  400efe:	<span class="token number">48</span> <span class="token number">83</span> ec <span class="token number">28</span>          	sub    <span class="token variable">$0x28</span>,%rsp
+  400f02:	<span class="token number">48</span> <span class="token number">89</span> e6             	mov    %rsp,%rsi
+  400f05:	e8 <span class="token number">52</span> 05 00 00       	callq  40145c <span class="token operator">&lt;</span>read_six_numbers<span class="token operator">&gt;</span>
+  400f0a:	<span class="token number">83</span> 3c <span class="token number">24</span> 01          	cmpl   <span class="token variable">$0x1</span>,<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>
+  400f0e:	<span class="token number">74</span> <span class="token number">20</span>                	je     400f30 <span class="token operator">&lt;</span>phase_2+0x3<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+  400f10:	e8 <span class="token number">25</span> 05 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  400f15:	eb <span class="token number">19</span>                	jmp    400f30 <span class="token operator">&lt;</span>phase_2+0x3<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+  400f17:	8b <span class="token number">43</span> fc             	mov    -0x4<span class="token punctuation">(</span>%rbx<span class="token punctuation">)</span>,%eax
+  400f1a:	01 c0                	<span class="token function">add</span>    %eax,%eax
+  400f1c:	<span class="token number">39</span> 03                	<span class="token function">cmp</span>    %eax,<span class="token punctuation">(</span>%rbx<span class="token punctuation">)</span>
+  400f1e:	<span class="token number">74</span> 05                	je     400f25 <span class="token operator">&lt;</span>phase_2+0x2<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+  400f20:	e8 <span class="token number">15</span> 05 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  400f25:	<span class="token number">48</span> <span class="token number">83</span> c3 04          	<span class="token function">add</span>    <span class="token variable">$0x4</span>,%rbx
+  400f29:	<span class="token number">48</span> <span class="token number">39</span> eb             	<span class="token function">cmp</span>    %rbp,%rbx
+  400f2c:	<span class="token number">75</span> e9                	jne    400f17 <span class="token operator">&lt;</span>phase_2+0x1b<span class="token operator">&gt;</span>
+  400f2e:	eb 0c                	jmp    400f3c <span class="token operator">&lt;</span>phase_2+0x4<span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>
+  400f30:	<span class="token number">48</span> 8d 5c <span class="token number">24</span> 04       	lea    0x4<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rbx
+  400f35:	<span class="token number">48</span> 8d 6c <span class="token number">24</span> <span class="token number">18</span>       	lea    0x18<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rbp
+  400f3a:	eb db                	jmp    400f17 <span class="token operator">&lt;</span>phase_2+0x1b<span class="token operator">&gt;</span>
+  400f3c:	<span class="token number">48</span> <span class="token number">83</span> c4 <span class="token number">28</span>          	<span class="token function">add</span>    <span class="token variable">$0x28</span>,%rsp
+  400f40:	5b                   	pop    %rbx
+  400f41:	5d                   	pop    %rbp
+  400f42:	c3                   	retq   
+</pre><p>&#x6240;&#x4EE5;<code>phase_2</code>&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token keyword keyword-void">void</span> <span class="token function">phase_2</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x50A8;&#x5B58;&#x6240;&#x8BFB;&#x53D6;&#x7684;&#x503C;</span>
+    <span class="token keyword keyword-int">int</span> int_vals<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>top <span class="token operator">=</span> int_vals<span class="token punctuation">;</span>
+    <span class="token comment">// &#x8FDB;&#x884C;&#x8BFB;&#x53D6;</span>
+    <span class="token function">read_six_numbers</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> top<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7B2C;&#x4E00;&#x4E2A;&#x8BFB;&#x53D6;&#x7684;&#x503C;&#x5FC5;&#x987B;&#x4E3A;1&#xFF0C;&#x4E14;&#x540E;&#x4E00;&#x4E2A;&#x8BFB;&#x53D6;&#x7684;&#x503C;&#x5FC5;&#x987B;</span>
+    <span class="token comment">// &#x4E3A;&#x524D;&#x4E00;&#x4E2A;&#x503C;&#x7684;2&#x500D;&#xFF0C;&#x5426;&#x5219;&#x89E6;&#x53D1;&#x70B8;&#x5F39;</span>
+    <span class="token comment">// &#x4E5F;&#x5C31;&#x662F;&#x9996;&#x9879;&#x4E3A;1&#xFF0C;&#x516C;&#x6BD4;&#x4E3A;1/2&#x7684;&#x7B49;&#x6BD4;&#x6570;&#x5217;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>top <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-int">int</span><span class="token operator">*</span> iter_ptr <span class="token operator">=</span> top <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-do">do</span>
+            <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>iter_ptr <span class="token operator">==</span> <span class="token operator">*</span><span class="token punctuation">(</span>iter_ptr <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">)</span>
+                iter_ptr <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-else">else</span>
+                <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>iter_ptr <span class="token operator">!=</span> top <span class="token operator">+</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-else">else</span> <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h5 class="mume-header" id="323-%E7%AC%AC%E4%BA%8C%E5%85%B3%E5%AF%86%E7%A0%81">3.23 &#x7B2C;&#x4E8C;&#x5173;&#x5BC6;&#x7801;</h5>
+
+<p>&#x7EFC;&#x4E0A;&#xFF0C;&#x7B2C;&#x4E8C;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x4E3A;<br>
+<code>1 2 4 8 16 32</code></p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x901A;&#x8FC7;&#x7B2C;&#x4E8C;&#x5173;&#x7684;&#x63D0;&#x793A;&#xFF1A;<br>
+<img src="image/2021-07-11-02-32-15.png" alt="pass2"></p>
+<h4 class="mume-header" id="33-%E7%AC%AC%E4%B8%89%E5%85%B3">3.3 &#x7B2C;&#x4E09;&#x5173;</h4>
+
+<p>&#x548C;&#x4E4B;&#x524D;&#x5173;&#x5361;&#x4E00;&#x6837;&#xFF0C;&#x5BF9;<code>phase_3</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;</p>
+<h5 class="mume-header" id="331-phase_3%E5%87%BD%E6%95%B0">3.31 phase_3&#x51FD;&#x6570;</h5>
+
+<p>&#x6211;&#x4EEC;&#x627E;&#x5230;&#x540D;&#x4E3A;<code>phase_3</code>&#x7684;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">0000000000400f43 <span class="token operator">&lt;</span>phase_<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>:
+  400f43:	<span class="token number">48</span> <span class="token number">83</span> ec <span class="token number">18</span>          	sub    <span class="token variable">$0x18</span>,%rsp
+  400f47:	<span class="token number">48</span> 8d 4c <span class="token number">24</span> 0c       	lea    0xc<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rcx
+  400f4c:	<span class="token number">48</span> 8d <span class="token number">54</span> <span class="token number">24</span> 08       	lea    0x8<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rdx
+  400f51:	be cf <span class="token number">25</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x4025cf</span>,%esi
+  400f56:	b8 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%eax
+  400f5b:	e8 <span class="token number">90</span> fc ff ff       	callq  400bf0 <span class="token operator">&lt;</span>__isoc99_sscanf@plt<span class="token operator">&gt;</span>
+  400f60:	<span class="token number">83</span> f8 01             	<span class="token function">cmp</span>    <span class="token variable">$0x1</span>,%eax
+  400f63:	7f 05                	jg     400f6a <span class="token operator">&lt;</span>phase_3+0x2<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span>
+  400f65:	e8 d0 04 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  400f6a:	<span class="token number">83</span> 7c <span class="token number">24</span> 08 07       	cmpl   <span class="token variable">$0x7</span>,0x8<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>
+  400f6f:	<span class="token number">77</span> 3c                	ja     400fad <span class="token operator">&lt;</span>phase_3+0x6a<span class="token operator">&gt;</span>
+  400f71:	8b <span class="token number">44</span> <span class="token number">24</span> 08          	mov    0x8<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%eax
+  400f75:	ff <span class="token number">24</span> c5 <span class="token number">70</span> <span class="token number">24</span> <span class="token number">40</span> 00 	jmpq   *0x402470<span class="token punctuation">(</span>,%rax,8<span class="token punctuation">)</span>
+  400f7c:	b8 cf 00 00 00       	mov    <span class="token variable">$0xcf</span>,%eax
+  400f81:	eb 3b                	jmp    400fbe <span class="token operator">&lt;</span>phase_3+0x7b<span class="token operator">&gt;</span>
+  400f83:	b8 c3 02 00 00       	mov    <span class="token variable">$0x2c3</span>,%eax
+  400f88:	eb <span class="token number">34</span>                	jmp    400fbe <span class="token operator">&lt;</span>phase_3+0x7b<span class="token operator">&gt;</span>
+  400f8a:	b8 00 01 00 00       	mov    <span class="token variable">$0x100</span>,%eax
+  400f8f:	eb 2d                	jmp    400fbe <span class="token operator">&lt;</span>phase_3+0x7b<span class="token operator">&gt;</span>
+  400f91:	b8 <span class="token number">85</span> 01 00 00       	mov    <span class="token variable">$0x185</span>,%eax
+  400f96:	eb <span class="token number">26</span>                	jmp    400fbe <span class="token operator">&lt;</span>phase_3+0x7b<span class="token operator">&gt;</span>
+  400f98:	b8 ce 00 00 00       	mov    <span class="token variable">$0xce</span>,%eax
+  400f9d:	eb 1f                	jmp    400fbe <span class="token operator">&lt;</span>phase_3+0x7b<span class="token operator">&gt;</span>
+  400f9f:	b8 aa 02 00 00       	mov    <span class="token variable">$0x2aa</span>,%eax
+  400fa4:	eb <span class="token number">18</span>                	jmp    400fbe <span class="token operator">&lt;</span>phase_3+0x7b<span class="token operator">&gt;</span>
+  400fa6:	b8 <span class="token number">47</span> 01 00 00       	mov    <span class="token variable">$0x147</span>,%eax
+  400fab:	eb <span class="token number">11</span>                	jmp    400fbe <span class="token operator">&lt;</span>phase_3+0x7b<span class="token operator">&gt;</span>
+  400fad:	e8 <span class="token number">88</span> 04 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  400fb2:	b8 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%eax
+  400fb7:	eb 05                	jmp    400fbe <span class="token operator">&lt;</span>phase_3+0x7b<span class="token operator">&gt;</span>
+  400fb9:	b8 <span class="token number">37</span> 01 00 00       	mov    <span class="token variable">$0x137</span>,%eax
+  400fbe:	3b <span class="token number">44</span> <span class="token number">24</span> 0c          	<span class="token function">cmp</span>    0xc<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%eax
+  400fc2:	<span class="token number">74</span> 05                	je     400fc9 <span class="token operator">&lt;</span>phase_3+0x8<span class="token operator"><span class="token file-descriptor important">6</span>&gt;</span>
+  400fc4:	e8 <span class="token number">71</span> 04 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  400fc9:	<span class="token number">48</span> <span class="token number">83</span> c4 <span class="token number">18</span>          	<span class="token function">add</span>    <span class="token variable">$0x18</span>,%rsp
+  400fcd:	c3                   	retq   
+</pre><p>&#x5BF9;&#x5176;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x8C03;&#x7528;<code>sscanf</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x8BFB;&#x53D6;&#xFF0C;&#x6211;&#x4EEC;&#x6240;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7528;&#x4E8E;&#x8BFB;&#x53D6;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x6709;&#x5927;&#x91CF;&#x8DF3;&#x5411;&#x76F8;&#x540C;&#x5730;&#x5740;&#x7684;&#x8DF3;&#x8F6C;&#x6307;&#x4EE4;&#xFF0C;&#x4E14;&#x7ED3;&#x6784;&#x4E4B;&#x7C7B;&#x7684;&#x4E0E;<code>switch</code>&#x8BED;&#x53E5;&#x7B26;&#x5408;&#xFF0C;&#x56E0;&#x6B64;&#x5224;&#x65AD;&#x8BE5;&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x901A;&#x8FC7;&#x8BFB;&#x53D6;&#x6807;&#x7B7E;&#x503C;&#x548C;&#x76EE;&#x6807;&#x503C;&#x6765;&#x6BD4;&#x8F83;&#x76EE;&#x6807;&#x503C;&#x4E0E;&#x6240;&#x7ED9;&#x7684;&#x503C;&#x662F;&#x5426;&#x76F8;&#x540C;&#xFF0C;&#x4E14;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x89E6;&#x53D1;&#x70B8;&#x5F39;&#x3002;</p>
+<p>&#x548C;&#x4E0A;&#x4E00;&#x5173;&#x4E00;&#x6837;&#xFF0C;<code>sscanf</code>&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x8D77;&#x59CB;&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x8981;&#x7528;&#x8C03;&#x8BD5;&#x5668;&#x67E5;&#x6E05;&#x5230;&#x5E95;&#x8BE5;&#x4F20;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x3002;<br>
+<img src="image/2021-07-11-02-56-56.png" alt="str3"></p>
+<p>&#x6240;&#x4EE5;<code>phase_3</code>&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token keyword keyword-void">void</span> <span class="token function">phase_3</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x50A8;&#x5B58;&#x6807;&#x7B7E;&#x503C;&#x4EE5;&#x53CA;&#x76EE;&#x6807;&#x503C;</span>
+    <span class="token keyword keyword-int">int</span> int_vals<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x6307;&#x5411;&#x6807;&#x7B7E;&#x503C;&#x7684;&#x6307;&#x9488;</span>
+    <span class="token comment">// &#x7B2C;2&#x4E2A;&#x5199;&#x5165;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>val <span class="token operator">=</span> <span class="token operator">&amp;</span>int_vals<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x6307;&#x5411;&#x76EE;&#x6807;&#x503C;&#x7684;&#x6307;&#x9488;</span>
+    <span class="token comment">// &#x7B2C;1&#x4E2A;&#x5199;&#x5165;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>sel <span class="token operator">=</span> <span class="token operator">&amp;</span>int_vals<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x8BFB;&#x53D6;&#x7684;&#x5339;&#x914D;&#x683C;&#x5F0F;&#x7684;&#x5B57;&#x7B26;&#x6570;&#x91CF;&#x5FC5;&#x987B;&#x8981;&#x5927;&#x4E8E;1&#xFF0C;&#x6807;&#x7B7E;&#x503C;&#x8981;&#x5C0F;&#x4E8E;8&#xFF0C;</span>
+    <span class="token comment">// &#x4E14;&#x76EE;&#x6807;&#x503C;&#x8981;&#x4E0E;&#x5BF9;&#x5E94;&#x6807;&#x7B7E;&#x4E2D;&#x7684;&#x503C;&#x76F8;&#x540C;&#xFF0C;&#x5426;&#x5219;&#x89E6;&#x53D1;&#x70B8;&#x5F39;</span>
+    <span class="token comment">// *0x4025cf</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">sscanf</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> <span class="token string">&quot;%d %d&quot;</span><span class="token punctuation">,</span> sel<span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">*</span>sel <span class="token operator">&lt;=</span> <span class="token number">7</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-int">int</span> res<span class="token punctuation">;</span>
+        <span class="token keyword keyword-switch">switch</span> <span class="token punctuation">(</span><span class="token operator">*</span>sel<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-case">case</span> <span class="token number">0</span><span class="token operator">:</span>
+                res <span class="token operator">=</span> <span class="token number">207</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-case">case</span> <span class="token number">2</span><span class="token operator">:</span>
+                res <span class="token operator">=</span> <span class="token number">707</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-case">case</span> <span class="token number">3</span><span class="token operator">:</span>
+                res <span class="token operator">=</span> <span class="token number">256</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-case">case</span> <span class="token number">4</span><span class="token operator">:</span>
+                res <span class="token operator">=</span> <span class="token number">389</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-case">case</span> <span class="token number">5</span><span class="token operator">:</span>
+                res <span class="token operator">=</span> <span class="token number">206</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-case">case</span> <span class="token number">6</span><span class="token operator">:</span>
+                res <span class="token operator">=</span> <span class="token number">682</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-case">case</span> <span class="token number">7</span><span class="token operator">:</span>
+                res <span class="token operator">=</span> <span class="token number">327</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-default">default</span><span class="token operator">:</span>
+                res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-case">case</span> <span class="token number">1</span><span class="token operator">:</span>
+                res <span class="token operator">=</span> <span class="token number">311</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>res <span class="token operator">!=</span> <span class="token operator">*</span>val<span class="token punctuation">)</span> <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-else">else</span> <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h5 class="mume-header" id="332-%E7%AC%AC%E4%B8%89%E5%85%B3%E5%AF%86%E7%A0%81">3.32 &#x7B2C;&#x4E09;&#x5173;&#x5BC6;&#x7801;</h5>
+
+<p>&#x7EFC;&#x4E0A;&#xFF0C;&#x7B2C;&#x4E09;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x6709;&#x591A;&#x4E2A;&#xFF0C;&#x4EE5;&#x4E0B;&#x53EA;&#x5217;&#x51FA;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#xFF0C;&#x4E3A;<br>
+<code>0 207</code></p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x901A;&#x8FC7;&#x7B2C;&#x4E09;&#x5173;&#x7684;&#x63D0;&#x793A;&#xFF1A;<br>
+<img src="image/2021-07-11-03-01-00.png" alt="pass3"></p>
+<h4 class="mume-header" id="34-%E7%AC%AC%E5%9B%9B%E5%85%B3">3.4 &#x7B2C;&#x56DB;&#x5173;</h4>
+
+<p>&#x548C;&#x4E4B;&#x524D;&#x5173;&#x5361;&#x4E00;&#x6837;&#xFF0C;&#x5BF9;<code>phase_4</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;</p>
+<h5 class="mume-header" id="341-func4%E5%87%BD%E6%95%B0">3.41 func4&#x51FD;&#x6570;</h5>
+
+<p>&#x6211;&#x4EEC;&#x5BF9;<code>phase_4</code>&#x51FD;&#x6570;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x5176;&#x8C03;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>func4</code>&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5BF9;<code>func4</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x8BE5;&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x6709;&#x4E09;&#x4E2A;&#x5F62;&#x53C2;&#xFF0C;&#x7B2C;&#x4E8C;&#x548C;&#x7B2C;&#x4E09;&#x4E2A;&#x5F62;&#x53C2;&#x7684;&#x67D0;&#x79CD;&#x52A0;&#x51CF;&#x79FB;&#x4F4D;&#x7B49;&#x64CD;&#x4F5C;&#x540E;&#x7684;&#x6570;&#x6839;&#x636E;&#x4E0E;&#x7B2C;&#x4E00;&#x4E2A;&#x5F62;&#x53C2;&#x7684;&#x903B;&#x8F91;&#x5173;&#x7CFB;&#x6765;&#x51B3;&#x5B9A;&#x8BE5;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;&#x6574;&#x6570;&#x3002;<br>
+&#x8BE5;&#x51FD;&#x6570;&#x4E2D;&#x5B58;&#x5728;&#x9012;&#x5F52;&#x8C03;&#x7528;&#x3002;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">0000000000400fce <span class="token operator">&lt;</span>func<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>:
+  400fce:	<span class="token number">48</span> <span class="token number">83</span> ec 08          	sub    <span class="token variable">$0x8</span>,%rsp
+  400fd2:	<span class="token number">89</span> d0                	mov    %edx,%eax
+  400fd4:	<span class="token number">29</span> f0                	sub    %esi,%eax
+  400fd6:	<span class="token number">89</span> c1                	mov    %eax,%ecx
+  400fd8:	c1 e9 1f             	shr    <span class="token variable">$0x1f</span>,%ecx
+  400fdb:	01 c8                	<span class="token function">add</span>    %ecx,%eax
+  400fdd:	d1 f8                	sar    %eax
+  400fdf:	8d 0c <span class="token number">30</span>             	lea    <span class="token punctuation">(</span>%rax,%rsi,1<span class="token punctuation">)</span>,%ecx
+  400fe2:	<span class="token number">39</span> f9                	<span class="token function">cmp</span>    %edi,%ecx
+  400fe4:	7e 0c                	jle    400ff2 <span class="token operator">&lt;</span>func4+0x2<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+  400fe6:	8d <span class="token number">51</span> ff             	lea    -0x1<span class="token punctuation">(</span>%rcx<span class="token punctuation">)</span>,%edx
+  400fe9:	e8 e0 ff ff ff       	callq  400fce <span class="token operator">&lt;</span>func<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+  400fee:	01 c0                	<span class="token function">add</span>    %eax,%eax
+  400ff0:	eb <span class="token number">15</span>                	jmp    <span class="token number">401007</span> <span class="token operator">&lt;</span>func4+0x3<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+  400ff2:	b8 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%eax
+  400ff7:	<span class="token number">39</span> f9                	<span class="token function">cmp</span>    %edi,%ecx
+  400ff9:	7d 0c                	jge    <span class="token number">401007</span> <span class="token operator">&lt;</span>func4+0x3<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+  400ffb:	8d <span class="token number">71</span> 01             	lea    0x1<span class="token punctuation">(</span>%rcx<span class="token punctuation">)</span>,%esi
+  400ffe:	e8 cb ff ff ff       	callq  400fce <span class="token operator">&lt;</span>func<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+  <span class="token number">401003</span>:	8d <span class="token number">44</span> 00 01          	lea    0x1<span class="token punctuation">(</span>%rax,%rax,1<span class="token punctuation">)</span>,%eax
+  <span class="token number">401007</span>:	<span class="token number">48</span> <span class="token number">83</span> c4 08          	<span class="token function">add</span>    <span class="token variable">$0x8</span>,%rsp
+  40100b:	c3                   	retq   
+</pre><p>&#x6240;&#x4EE5;<code>func4</code>&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token keyword keyword-int">int</span> <span class="token function">func4</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> edi<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> esi<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> edx<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x7B2C;&#x4E8C;&#x548C;&#x7B2C;&#x4E09;&#x4E2A;&#x5F62;&#x53C2;&#x7684;&#x67D0;&#x79CD;&#x52A0;&#x51CF;&#x79FB;&#x4F4D;&#x7B49;&#x64CD;&#x4F5C;</span>
+    <span class="token comment">// &#x5F53;esi&#x4E3A;0&#xFF0C;edx&#x4E3A;14&#x65F6;&#xFF0C;&#x7ED3;&#x679C;&#x503C;&#x4E3A;7</span>
+    <span class="token keyword keyword-int">int</span> res <span class="token operator">=</span> edx <span class="token operator">-</span> esi<span class="token punctuation">;</span>
+    res <span class="token operator">=</span> <span class="token punctuation">(</span>res <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span><span class="token punctuation">)</span>res <span class="token operator">&gt;&gt;</span> <span class="token number">31</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&gt;&gt;</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> val <span class="token operator">=</span> res <span class="token operator">+</span> esi<span class="token punctuation">;</span>
+    <span class="token comment">// &#x76F8;&#x7B49;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FDB;&#x884C;&#x9012;&#x5F52;&#x8C03;&#x7528;&#x5224;&#x65AD;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>val <span class="token operator">==</span> edi<span class="token punctuation">)</span>
+        <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>val <span class="token operator">&lt;</span> edi<span class="token punctuation">)</span>
+        <span class="token keyword keyword-return">return</span> <span class="token function">func4</span><span class="token punctuation">(</span>edi<span class="token punctuation">,</span> val <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> edx<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-else">else</span> 
+        <span class="token keyword keyword-return">return</span> <span class="token function">func4</span><span class="token punctuation">(</span>edi<span class="token punctuation">,</span> esi<span class="token punctuation">,</span> val <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h5 class="mume-header" id="342-phase_4%E5%87%BD%E6%95%B0">3.42 phase_4&#x51FD;&#x6570;</h5>
+
+<p>&#x5BF9;<code>phase_4</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x5176;&#x4E5F;&#x662F;&#x8C03;&#x7528;<code>sscanf</code>&#x51FD;&#x6570;&#x6765;&#x8BFB;&#x53D6;&#x6570;&#x503C;&#x7684;&#xFF0C;&#x4E14;&#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;&#x4E0E;&#x7B2C;&#x4E09;&#x5173;&#x7684;&#x4E00;&#x6837;&#x3002;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">000000000040100c <span class="token operator">&lt;</span>phase_<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>:
+  40100c:	<span class="token number">48</span> <span class="token number">83</span> ec <span class="token number">18</span>          	sub    <span class="token variable">$0x18</span>,%rsp
+  <span class="token number">401010</span>:	<span class="token number">48</span> 8d 4c <span class="token number">24</span> 0c       	lea    0xc<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rcx
+  <span class="token number">401015</span>:	<span class="token number">48</span> 8d <span class="token number">54</span> <span class="token number">24</span> 08       	lea    0x8<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rdx
+  40101a:	be cf <span class="token number">25</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x4025cf</span>,%esi
+  40101f:	b8 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%eax
+  <span class="token number">401024</span>:	e8 c7 fb ff ff       	callq  400bf0 <span class="token operator">&lt;</span>__isoc99_sscanf@plt<span class="token operator">&gt;</span>
+  <span class="token number">401029</span>:	<span class="token number">83</span> f8 02             	<span class="token function">cmp</span>    <span class="token variable">$0x2</span>,%eax
+  40102c:	<span class="token number">75</span> 07                	jne    <span class="token number">401035</span> <span class="token operator">&lt;</span>phase_4+0x2<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+  40102e:	<span class="token number">83</span> 7c <span class="token number">24</span> 08 0e       	cmpl   <span class="token variable">$0xe</span>,0x8<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>
+  <span class="token number">401033</span>:	<span class="token number">76</span> 05                	jbe    40103a <span class="token operator">&lt;</span>phase_4+0x2e<span class="token operator">&gt;</span>
+  <span class="token number">401035</span>:	e8 00 04 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  40103a:	ba 0e 00 00 00       	mov    <span class="token variable">$0xe</span>,%edx
+  40103f:	be 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%esi
+  <span class="token number">401044</span>:	8b 7c <span class="token number">24</span> 08          	mov    0x8<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%edi
+  <span class="token number">401048</span>:	e8 <span class="token number">81</span> ff ff ff       	callq  400fce <span class="token operator">&lt;</span>func<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+  40104d:	<span class="token number">85</span> c0                	<span class="token builtin class-name">test</span>   %eax,%eax
+  40104f:	<span class="token number">75</span> 07                	jne    <span class="token number">401058</span> <span class="token operator">&lt;</span>phase_4+0x4c<span class="token operator">&gt;</span>
+  <span class="token number">401051</span>:	<span class="token number">83</span> 7c <span class="token number">24</span> 0c 00       	cmpl   <span class="token variable">$0x0</span>,0xc<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>
+  <span class="token number">401056</span>:	<span class="token number">74</span> 05                	je     40105d <span class="token operator">&lt;</span>phase_4+0x5<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span>
+  <span class="token number">401058</span>:	e8 <span class="token function">dd</span> 03 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  40105d:	<span class="token number">48</span> <span class="token number">83</span> c4 <span class="token number">18</span>          	<span class="token function">add</span>    <span class="token variable">$0x18</span>,%rsp
+  <span class="token number">401061</span>:	c3                   	retq   
+</pre><p>&#x6240;&#x4EE5;<code>phase_4</code>&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token keyword keyword-void">void</span> <span class="token function">phase_4</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x50A8;&#x5B58;&#x503C;</span>
+    <span class="token keyword keyword-int">int</span> int_vals<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7B2C;2&#x4E2A;&#x5199;&#x5165;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>rcx <span class="token operator">=</span> <span class="token operator">&amp;</span>int_vals<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7B2C;1&#x4E2A;&#x5199;&#x5165;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>rdx <span class="token operator">=</span> <span class="token operator">&amp;</span>int_vals<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x6211;&#x4EEC;&#x7684;&#x8F93;&#x5165;&#x503C;&#x5FC5;&#x987B;&#x6EE1;&#x8DB3;&#xFF1A;</span>
+    <span class="token comment">// &#x8BFB;&#x53D6;&#x7684;&#x5339;&#x914D;&#x683C;&#x5F0F;&#x7684;&#x5B57;&#x7B26;&#x6570;&#x91CF;&#x5FC5;&#x987B;&#x8981;&#x7B49;&#x4E8E;2</span>
+    <span class="token comment">// &#x7B2C;1&#x4E2A;&#x5199;&#x5165;&#x7684;&#x503C;&#x8981;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;14&#x4E14;&#x8981;&#x4F7F;func4&#x8FD4;&#x56DE;0</span>
+    <span class="token comment">// &#x7B2C;2&#x4E2A;&#x5199;&#x5165;&#x7684;&#x503C;&#x8981;&#x7B49;&#x4E8E;0</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">sscanf</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> <span class="token string">&quot;%d %d&quot;</span><span class="token punctuation">,</span> rdx<span class="token punctuation">,</span> rcx<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">2</span> <span class="token operator">||</span> <span class="token operator">*</span>rdx <span class="token operator">&gt;</span> <span class="token number">14</span> <span class="token operator">||</span> <span class="token function">func4</span><span class="token punctuation">(</span><span class="token operator">*</span>rdx<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span> <span class="token operator">||</span> <span class="token operator">*</span>rcx <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h5 class="mume-header" id="343-%E7%AC%AC%E5%9B%9B%E5%85%B3%E5%AF%86%E7%A0%81">3.43 &#x7B2C;&#x56DB;&#x5173;&#x5BC6;&#x7801;</h5>
+
+<p>&#x7EFC;&#x4E0A;&#xFF0C;&#x7B2C;&#x56DB;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x4E3A;<br>
+<code>7 0</code></p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x901A;&#x8FC7;&#x7B2C;&#x56DB;&#x5173;&#x7684;&#x63D0;&#x793A;&#xFF1A;<br>
+<img src="image/2021-07-11-03-28-16.png" alt="pass4"></p>
+<h4 class="mume-header" id="35-%E7%AC%AC%E4%BA%94%E5%85%B3">3.5 &#x7B2C;&#x4E94;&#x5173;</h4>
+
+<p>&#x548C;&#x4E4B;&#x524D;&#x5173;&#x5361;&#x4E00;&#x6837;&#xFF0C;&#x5BF9;<code>phase_5</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;</p>
+<h5 class="mume-header" id="351-phase_5%E5%87%BD%E6%95%B0">3.51 phase_5&#x51FD;&#x6570;</h5>
+
+<p>&#x5BF9;<code>phase_5</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x8BE5;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x4E86;<code>string_length</code>&#x548C;<code>strings_not_equal</code>&#x51FD;&#x6570;&#x6765;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">0000000000401062 <span class="token operator">&lt;</span>phase_<span class="token operator"><span class="token file-descriptor important">5</span>&gt;</span>:
+  <span class="token number">401062</span>:	<span class="token number">53</span>                   	push   %rbx
+  <span class="token number">401063</span>:	<span class="token number">48</span> <span class="token number">83</span> ec <span class="token number">20</span>          	sub    <span class="token variable">$0x20</span>,%rsp
+  <span class="token number">401067</span>:	<span class="token number">48</span> <span class="token number">89</span> fb             	mov    %rdi,%rbx
+  40106a:	<span class="token number">64</span> <span class="token number">48</span> 8b 04 <span class="token number">25</span> <span class="token number">28</span> 00 	mov    %fs:0x28,%rax  <span class="token comment">#no use</span>
+  <span class="token number">401071</span>:	00 00 
+  <span class="token number">401073</span>:	<span class="token number">48</span> <span class="token number">89</span> <span class="token number">44</span> <span class="token number">24</span> <span class="token number">18</span>       	mov    %rax,0x18<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>  <span class="token comment">#no use</span>
+  <span class="token number">401078</span>:	<span class="token number">31</span> c0                	xor    %eax,%eax  <span class="token comment">#%eax = 0</span>
+  40107a:	e8 9c 02 00 00       	callq  40131b <span class="token operator">&lt;</span>string_length<span class="token operator">&gt;</span>
+  40107f:	<span class="token number">83</span> f8 06             	<span class="token function">cmp</span>    <span class="token variable">$0x6</span>,%eax
+  <span class="token number">401082</span>:	<span class="token number">74</span> 4e                	je     4010d2 <span class="token operator">&lt;</span>phase_5+0x7<span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>
+  <span class="token number">401084</span>:	e8 b1 03 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  <span class="token number">401089</span>:	eb <span class="token number">47</span>                	jmp    4010d2 <span class="token operator">&lt;</span>phase_5+0x7<span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>
+  40108b:	0f b6 0c 03          	movzbl <span class="token punctuation">(</span>%rbx,%rax,1<span class="token punctuation">)</span>,%ecx  <span class="token comment">#one char each time</span>
+  40108f:	<span class="token number">88</span> 0c <span class="token number">24</span>             	mov    %cl,<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>  <span class="token comment">#store one char</span>
+  <span class="token number">401092</span>:	<span class="token number">48</span> 8b <span class="token number">14</span> <span class="token number">24</span>          	mov    <span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rdx
+  <span class="token number">401096</span>:	<span class="token number">83</span> e2 0f             	and    <span class="token variable">$0xf</span>,%edx  <span class="token comment">#only reserve the lowest 4 bits</span>
+  <span class="token number">401099</span>:	0f b6 <span class="token number">92</span> b0 <span class="token number">24</span> <span class="token number">40</span> 00 	movzbl 0x4024b0<span class="token punctuation">(</span>%rdx<span class="token punctuation">)</span>,%edx  <span class="token comment">#*(0x4024b0+val)</span>
+  4010a0:	<span class="token number">88</span> <span class="token number">54</span> 04 <span class="token number">10</span>          	mov    %dl,0x10<span class="token punctuation">(</span>%rsp,%rax,1<span class="token punctuation">)</span>  <span class="token comment">#store one char</span>
+  4010a4:	<span class="token number">48</span> <span class="token number">83</span> c0 01          	<span class="token function">add</span>    <span class="token variable">$0x1</span>,%rax
+  4010a8:	<span class="token number">48</span> <span class="token number">83</span> f8 06          	<span class="token function">cmp</span>    <span class="token variable">$0x6</span>,%rax
+  4010ac:	<span class="token number">75</span> <span class="token function">dd</span>                	jne    40108b <span class="token operator">&lt;</span>phase_5+0x2<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+  4010ae:	c6 <span class="token number">44</span> <span class="token number">24</span> <span class="token number">16</span> 00       	movb   <span class="token variable">$0x0</span>,0x16<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>  <span class="token comment">#add &apos;\0&apos; in end</span>
+  4010b3:	be 5e <span class="token number">24</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x40245e</span>,%esi
+  4010b8:	<span class="token number">48</span> 8d 7c <span class="token number">24</span> <span class="token number">10</span>       	lea    0x10<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rdi
+  4010bd:	e8 <span class="token number">76</span> 02 00 00       	callq  <span class="token number">401338</span> <span class="token operator">&lt;</span>strings_not_equal<span class="token operator">&gt;</span>
+  4010c2:	<span class="token number">85</span> c0                	<span class="token builtin class-name">test</span>   %eax,%eax
+  4010c4:	<span class="token number">74</span> <span class="token number">13</span>                	je     4010d9 <span class="token operator">&lt;</span>phase_5+0x7<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span>
+  4010c6:	e8 6f 03 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  4010cb:	0f 1f <span class="token number">44</span> 00 00       	nopl   0x0<span class="token punctuation">(</span>%rax,%rax,1<span class="token punctuation">)</span>
+  4010d0:	eb 07                	jmp    4010d9 <span class="token operator">&lt;</span>phase_5+0x7<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span>
+  4010d2:	b8 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%eax
+  4010d7:	eb b2                	jmp    40108b <span class="token operator">&lt;</span>phase_5+0x2<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+  4010d9:	<span class="token number">48</span> 8b <span class="token number">44</span> <span class="token number">24</span> <span class="token number">18</span>       	mov    0x18<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rax
+  4010de:	<span class="token number">64</span> <span class="token number">48</span> <span class="token number">33</span> 04 <span class="token number">25</span> <span class="token number">28</span> 00 	xor    %fs:0x28,%rax
+  4010e5:	00 00 
+  4010e7:	<span class="token number">74</span> 05                	je     4010ee <span class="token operator">&lt;</span>phase_5+0x8c<span class="token operator">&gt;</span>
+  4010e9:	e8 <span class="token number">42</span> fa ff ff       	callq  400b30 <span class="token operator">&lt;</span>__stack_chk_fail@plt<span class="token operator">&gt;</span>
+  4010ee:	<span class="token number">48</span> <span class="token number">83</span> c4 <span class="token number">20</span>          	<span class="token function">add</span>    <span class="token variable">$0x20</span>,%rsp
+  4010f2:	5b                   	pop    %rbx
+  4010f3:	c3                   	retq   
+</pre><p>&#x4ED4;&#x7EC6;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x662F;&#xFF1A;<br>
+&#x8BA9;&#x6211;&#x4EEC;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6210;&#x4E3A;&#x7D22;&#x5F15;&#xFF0C;&#x901A;&#x8FC7;&#x5F15;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x6240;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x7684;&#x67D0;&#x4E9B;&#x5B57;&#x7B26;&#x6765;&#x7EC4;&#x5408;&#x6210;&#x4E00;&#x4E2A;&#x548C;&#x8BE5;&#x51FD;&#x6570;&#x6240;&#x7ED9;&#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x540C;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p>&#x5176;&#x4E2D;&#x51FD;&#x6570;&#x6240;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x90FD;&#x53EA;&#x662F;&#x663E;&#x793A;&#x4E86;&#x8D77;&#x59CB;&#x5730;&#x5740;&#xFF0C;&#x548C;&#x4E4B;&#x524D;&#x4E00;&#x6837;&#xFF0C;&#x9700;&#x8981;&#x67E5;&#x627E;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x4E32;&#x3002;<br>
+<img src="image/2021-07-11-03-55-45.png" alt="str4"><br>
+<img src="image/2021-07-11-03-56-51.png" alt="str5"></p>
+<p>&#x6240;&#x4EE5;<code>phase_5</code>&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token keyword keyword-void">void</span> <span class="token function">phase_5</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x6211;&#x4EEC;&#x8F93;&#x5165;&#x7684;&#x5BC6;&#x7801;&#x957F;&#x5EA6;&#x5FC5;&#x987B;&#x4E3A;6(&#x4E0D;&#x5305;&#x542B;&#x7A7A;&#x5B57;&#x7B26;)&#xFF0C;&#x5426;&#x5219;&#x89E6;&#x53D1;&#x70B8;&#x5F39;</span>
+    <span class="token comment">// &#x6211;&#x4EEC;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4F1A;&#x88AB;&#x5206;&#x6210;&#x5355;&#x72EC;&#x7684;&#x5B57;&#x7B26;&#xFF0C;</span>
+    <span class="token comment">// &#x4E14;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x53EA;&#x4FDD;&#x7559;&#x6700;&#x4F4E;&#x7684;4&#x4F4D;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x6210;&#x6570;&#x503C;&#xFF0C;&#x7528;&#x4E8E;&#x8868;&#x793A;&#x51FD;&#x6570;&#x6240;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x7684;&#x7D22;&#x5F15;</span>
+    <span class="token comment">// &#x6211;&#x4EEC;&#x8981;&#x901A;&#x8FC7;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x6765;&#x7EC4;&#x5408;&#x6210;&#x4E00;&#x4E2A;&#x548C;&#x6240;&#x7ED9;&#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x540C;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5426;&#x5219;&#x89E6;&#x53D1;&#x70B8;&#x5F39;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">string_length</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// &#x8BA1;&#x6570;</span>
+        <span class="token keyword keyword-int">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-char">char</span> decode<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x6240;&#x7ED9;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x5408;</span>
+        <span class="token comment">// *0x4024b0</span>
+        <span class="token comment">// &#x6240;&#x9700;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x7D22;&#x5F15;&#x53EF;&#x4EE5;&#x4E3A;&#x4EE5;&#x4E0B;&#x8FD9;&#x79CD;&#x7EC4;&#x5408;&#xFF1A;</span>
+        <span class="token comment">// 9 15 14 5 6 7</span>
+        <span class="token keyword keyword-char">char</span> char_set<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;maduiersnfotvbylSo you think you can stop the bomb with ctrl-c, do you?&quot;</span><span class="token punctuation">;</span> 
+        <span class="token comment">// &#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8981;&#x4E0E;&#x5176;&#x76F8;&#x540C;</span>
+        <span class="token comment">// *0x40245e</span>
+        <span class="token keyword keyword-char">char</span> code<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;flyers&quot;</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x9010;&#x4F4D;&#x7EC4;&#x5408;&#x6210;&#x5B57;&#x7B26;&#x4E32;</span>
+        <span class="token keyword keyword-do">do</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-int">int</span> val <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">(</span>str<span class="token operator">+</span>count<span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">0x0f</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            decode<span class="token punctuation">[</span>count<span class="token punctuation">]</span> <span class="token operator">=</span> char_set<span class="token punctuation">[</span>val<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span><span class="token operator">++</span>count <span class="token operator">!=</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        decode<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&apos;\0&apos;</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x6BD4;&#x8F83;&#x662F;&#x5426;&#x76F8;&#x540C;</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">strings_not_equal</span><span class="token punctuation">(</span>decode<span class="token punctuation">,</span> code<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-else">else</span>
+        <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h5 class="mume-header" id="352-%E7%AC%AC%E4%BA%94%E5%85%B3%E5%AF%86%E7%A0%81">3.52 &#x7B2C;&#x4E94;&#x5173;&#x5BC6;&#x7801;</h5>
+
+<p>&#x7EFC;&#x4E0A;&#xFF0C;&#x7B2C;&#x4E94;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x6709;&#x591A;&#x4E2A;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#xFF0C;&#x4E3A;<br>
+<code>IONEFG</code></p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x901A;&#x8FC7;&#x7B2C;&#x4E94;&#x5173;&#x7684;&#x63D0;&#x793A;&#xFF1A;<br>
+<img src="image/2021-07-11-03-59-40.png" alt="pass5"></p>
+<h4 class="mume-header" id="36-%E7%AC%AC%E5%85%AD%E5%85%B3">3.6 &#x7B2C;&#x516D;&#x5173;</h4>
+
+<p>&#x548C;&#x4E4B;&#x524D;&#x5173;&#x5361;&#x4E00;&#x6837;&#xFF0C;&#x5BF9;<code>phase_6</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;</p>
+<h5 class="mume-header" id="361-phase_6%E5%87%BD%E6%95%B0">3.61 phase_6&#x51FD;&#x6570;</h5>
+
+<p>&#x5BF9;<code>phase_6</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x8BE5;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x4E86;<code>read_six_numbers</code>&#x6765;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">00000000004010f4 <span class="token operator">&lt;</span>phase_<span class="token operator"><span class="token file-descriptor important">6</span>&gt;</span>:
+  4010f4:	<span class="token number">41</span> <span class="token number">56</span>                	push   %r14
+  4010f6:	<span class="token number">41</span> <span class="token number">55</span>                	push   %r13
+  4010f8:	<span class="token number">41</span> <span class="token number">54</span>                	push   %r12
+  4010fa:	<span class="token number">55</span>                   	push   %rbp
+  4010fb:	<span class="token number">53</span>                   	push   %rbx
+  4010fc:	<span class="token number">48</span> <span class="token number">83</span> ec <span class="token number">50</span>          	sub    <span class="token variable">$0x50</span>,%rsp
+  <span class="token number">401100</span>:	<span class="token number">49</span> <span class="token number">89</span> e5             	mov    %rsp,%r13  <span class="token comment">#&amp;a</span>
+  <span class="token number">401103</span>:	<span class="token number">48</span> <span class="token number">89</span> e6             	mov    %rsp,%rsi
+  <span class="token number">401106</span>:	e8 <span class="token number">51</span> 03 00 00       	callq  40145c <span class="token operator">&lt;</span>read_six_numbers<span class="token operator">&gt;</span>
+  40110b:	<span class="token number">49</span> <span class="token number">89</span> e6             	mov    %rsp,%r14  <span class="token comment">#&amp;a</span>
+  40110e:	<span class="token number">41</span> <span class="token function">bc</span> 00 00 00 00    	mov    <span class="token variable">$0x0</span>,%r12d  <span class="token comment">#0</span>
+  <span class="token number">401114</span>:	4c <span class="token number">89</span> ed             	mov    %r13,%rbp  <span class="token comment">#&amp;a</span>
+  <span class="token number">401117</span>:	<span class="token number">41</span> 8b <span class="token number">45</span> 00          	mov    0x0<span class="token punctuation">(</span>%r13<span class="token punctuation">)</span>,%eax  <span class="token comment">#a</span>
+  40111b:	<span class="token number">83</span> e8 01             	sub    <span class="token variable">$0x1</span>,%eax  <span class="token comment">#a-1</span>
+  40111e:	<span class="token number">83</span> f8 05             	<span class="token function">cmp</span>    <span class="token variable">$0x5</span>,%eax  <span class="token comment">#a-1 &lt;= 5</span>
+  <span class="token number">401121</span>:	<span class="token number">76</span> 05                	jbe    <span class="token number">401128</span> <span class="token operator">&lt;</span>phase_6+0x3<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+  <span class="token number">401123</span>:	e8 <span class="token number">12</span> 03 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  <span class="token number">401128</span>:	<span class="token number">41</span> <span class="token number">83</span> c4 01          	<span class="token function">add</span>    <span class="token variable">$0x1</span>,%r12d  <span class="token comment">#1</span>
+  40112c:	<span class="token number">41</span> <span class="token number">83</span> fc 06          	<span class="token function">cmp</span>    <span class="token variable">$0x6</span>,%r12d  <span class="token comment">#%r12d == 6</span>
+  <span class="token number">401130</span>:	<span class="token number">74</span> <span class="token number">21</span>                	je     <span class="token number">401153</span> <span class="token operator">&lt;</span>phase_6+0x5f<span class="token operator">&gt;</span>
+  <span class="token number">401132</span>:	<span class="token number">44</span> <span class="token number">89</span> e3             	mov    %r12d,%ebx  <span class="token comment">#1</span>
+  <span class="token number">401135</span>:	<span class="token number">48</span> <span class="token number">63</span> c3             	movslq %ebx,%rax  <span class="token comment">#%ebx 1 -&gt; ...</span>
+  <span class="token number">401138</span>:	8b 04 <span class="token number">84</span>             	mov    <span class="token punctuation">(</span>%rsp,%rax,4<span class="token punctuation">)</span>,%eax  <span class="token comment">#%eax b -&gt; c -&gt; d -&gt; e -&gt; f</span>
+  40113b:	<span class="token number">39</span> <span class="token number">45</span> 00             	<span class="token function">cmp</span>    %eax,0x0<span class="token punctuation">(</span>%rbp<span class="token punctuation">)</span>  <span class="token comment">#a/b/... != %eax</span>
+  40113e:	<span class="token number">75</span> 05                	jne    <span class="token number">401145</span> <span class="token operator">&lt;</span>phase_6+0x5<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span>
+  <span class="token number">401140</span>:	e8 f5 02 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  <span class="token number">401145</span>:	<span class="token number">83</span> c3 01             	<span class="token function">add</span>    <span class="token variable">$0x1</span>,%ebx  <span class="token comment">#%ebx 2 -&gt; ...</span>
+  <span class="token number">401148</span>:	<span class="token number">83</span> fb 05             	<span class="token function">cmp</span>    <span class="token variable">$0x5</span>,%ebx  <span class="token comment">#%ebx &lt;= 5</span>
+  40114b:	7e e8                	jle    <span class="token number">401135</span> <span class="token operator">&lt;</span>phase_6+0x4<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span>
+  40114d:	<span class="token number">49</span> <span class="token number">83</span> c5 04          	<span class="token function">add</span>    <span class="token variable">$0x4</span>,%r13  <span class="token comment">#%r13 &amp;b -&gt; &amp;c -&gt; ...</span>
+  <span class="token number">401151</span>:	eb c1                	jmp    <span class="token number">401114</span> <span class="token operator">&lt;</span>phase_6+0x2<span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>
+  <span class="token number">401153</span>:	<span class="token number">48</span> 8d <span class="token number">74</span> <span class="token number">24</span> <span class="token number">18</span>       	lea    0x18<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rsi  <span class="token comment">#%rsp+24 after &amp;f</span>
+  <span class="token number">401158</span>:	4c <span class="token number">89</span> f0             	mov    %r14,%rax  <span class="token comment">#&amp;a</span>
+  40115b:	b9 07 00 00 00       	mov    <span class="token variable">$0x7</span>,%ecx  <span class="token comment">#7</span>
+  <span class="token number">401160</span>:	<span class="token number">89</span> ca                	mov    %ecx,%edx  <span class="token comment">#7</span>
+  <span class="token number">401162</span>:	2b <span class="token number">10</span>                	sub    <span class="token punctuation">(</span>%rax<span class="token punctuation">)</span>,%edx  <span class="token comment">#7 - a/b/...</span>
+  <span class="token number">401164</span>:	<span class="token number">89</span> <span class="token number">10</span>                	mov    %edx,<span class="token punctuation">(</span>%rax<span class="token punctuation">)</span>  <span class="token comment">#store in each a/b/...</span>
+  <span class="token number">401166</span>:	<span class="token number">48</span> <span class="token number">83</span> c0 04          	<span class="token function">add</span>    <span class="token variable">$0x4</span>,%rax  <span class="token comment">#b -&gt; c -&gt; d -&gt; e -&gt; f</span>
+  40116a:	<span class="token number">48</span> <span class="token number">39</span> f0             	<span class="token function">cmp</span>    %rsi,%rax  <span class="token comment">#%rax != %rsp+24</span>
+  40116d:	<span class="token number">75</span> f1                	jne    <span class="token number">401160</span> <span class="token operator">&lt;</span>phase_6+0x6c<span class="token operator">&gt;</span>
+  40116f:	be 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%esi
+  <span class="token number">401174</span>:	eb <span class="token number">21</span>                	jmp    <span class="token number">401197</span> <span class="token operator">&lt;</span>phase_6+0xa<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>
+  <span class="token number">401176</span>:	<span class="token number">48</span> 8b <span class="token number">52</span> 08          	mov    0x8<span class="token punctuation">(</span>%rdx<span class="token punctuation">)</span>,%rdx
+  40117a:	<span class="token number">83</span> c0 01             	<span class="token function">add</span>    <span class="token variable">$0x1</span>,%eax
+  40117d:	<span class="token number">39</span> c8                	<span class="token function">cmp</span>    %ecx,%eax
+  40117f:	<span class="token number">75</span> f5                	jne    <span class="token number">401176</span> <span class="token operator">&lt;</span>phase_6+0x8<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>
+  <span class="token number">401181</span>:	eb 05                	jmp    <span class="token number">401188</span> <span class="token operator">&lt;</span>phase_6+0x9<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+  <span class="token number">401183</span>:	ba d0 <span class="token number">32</span> <span class="token number">60</span> 00       	mov    <span class="token variable">$0x6032d0</span>,%edx
+  <span class="token number">401188</span>:	<span class="token number">48</span> <span class="token number">89</span> <span class="token number">54</span> <span class="token number">74</span> <span class="token number">20</span>       	mov    %rdx,0x20<span class="token punctuation">(</span>%rsp,%rsi,2<span class="token punctuation">)</span>  <span class="token comment">#*(%rsp+%rsi*2+32) = 0x6032d0</span>
+  40118d:	<span class="token number">48</span> <span class="token number">83</span> c6 04          	<span class="token function">add</span>    <span class="token variable">$0x4</span>,%rsi  <span class="token comment">#%rsi+4 4 -&gt; ...</span>
+  <span class="token number">401191</span>:	<span class="token number">48</span> <span class="token number">83</span> fe <span class="token number">18</span>          	<span class="token function">cmp</span>    <span class="token variable">$0x18</span>,%rsi  <span class="token comment">#%rsi == 24</span>
+  <span class="token number">401195</span>:	<span class="token number">74</span> <span class="token number">14</span>                	je     4011ab <span class="token operator">&lt;</span>phase_6+0xb<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span>
+  <span class="token number">401197</span>:	8b 0c <span class="token number">34</span>             	mov    <span class="token punctuation">(</span>%rsp,%rsi,1<span class="token punctuation">)</span>,%ecx  <span class="token comment">#a/b/...</span>
+  40119a:	<span class="token number">83</span> f9 01             	<span class="token function">cmp</span>    <span class="token variable">$0x1</span>,%ecx  <span class="token comment">#a/b/... &lt;= 1</span>
+  40119d:	7e e4                	jle    <span class="token number">401183</span> <span class="token operator">&lt;</span>phase_6+0x8f<span class="token operator">&gt;</span>
+  40119f:	b8 01 00 00 00       	mov    <span class="token variable">$0x1</span>,%eax
+  4011a4:	ba d0 <span class="token number">32</span> <span class="token number">60</span> 00       	mov    <span class="token variable">$0x6032d0</span>,%edx
+  4011a9:	eb cb                	jmp    <span class="token number">401176</span> <span class="token operator">&lt;</span>phase_6+0x8<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>
+  4011ab:	<span class="token number">48</span> 8b 5c <span class="token number">24</span> <span class="token number">20</span>       	mov    0x20<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rbx  <span class="token comment">#*(%rsp+32)</span>
+  4011b0:	<span class="token number">48</span> 8d <span class="token number">44</span> <span class="token number">24</span> <span class="token number">28</span>       	lea    0x28<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rax  <span class="token comment">#%rsp+40</span>
+  4011b5:	<span class="token number">48</span> 8d <span class="token number">74</span> <span class="token number">24</span> <span class="token number">50</span>       	lea    0x50<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rsi  <span class="token comment">#%rsp+80</span>
+  4011ba:	<span class="token number">48</span> <span class="token number">89</span> d9             	mov    %rbx,%rcx  <span class="token comment">#*(%rsp+32)</span>
+  4011bd:	<span class="token number">48</span> 8b <span class="token number">10</span>             	mov    <span class="token punctuation">(</span>%rax<span class="token punctuation">)</span>,%rdx  <span class="token comment">#*(%rsp+40)</span>
+  4011c0:	<span class="token number">48</span> <span class="token number">89</span> <span class="token number">51</span> 08          	mov    %rdx,0x8<span class="token punctuation">(</span>%rcx<span class="token punctuation">)</span>  <span class="token comment">#*(*(%rsp+32)+8)=*(%rsp+40)</span>
+  4011c4:	<span class="token number">48</span> <span class="token number">83</span> c0 08          	<span class="token function">add</span>    <span class="token variable">$0x8</span>,%rax  <span class="token comment">#%rsp+80+8</span>
+  4011c8:	<span class="token number">48</span> <span class="token number">39</span> f0             	<span class="token function">cmp</span>    %rsi,%rax  <span class="token comment">#%rax == %rsp+80</span>
+  4011cb:	<span class="token number">74</span> 05                	je     4011d2 <span class="token operator">&lt;</span>phase_6+0xde<span class="token operator">&gt;</span>
+  4011cd:	<span class="token number">48</span> <span class="token number">89</span> d1             	mov    %rdx,%rcx
+  4011d0:	eb eb                	jmp    4011bd <span class="token operator">&lt;</span>phase_6+0xc<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+  4011d2:	<span class="token number">48</span> c7 <span class="token number">42</span> 08 00 00 00 	movq   <span class="token variable">$0x0</span>,0x8<span class="token punctuation">(</span>%rdx<span class="token punctuation">)</span>
+  4011d9:	00 
+  4011da:	bd 05 00 00 00       	mov    <span class="token variable">$0x5</span>,%ebp
+  4011df:	<span class="token number">48</span> 8b <span class="token number">43</span> 08          	mov    0x8<span class="token punctuation">(</span>%rbx<span class="token punctuation">)</span>,%rax
+  4011e3:	8b 00                	mov    <span class="token punctuation">(</span>%rax<span class="token punctuation">)</span>,%eax
+  4011e5:	<span class="token number">39</span> 03                	<span class="token function">cmp</span>    %eax,<span class="token punctuation">(</span>%rbx<span class="token punctuation">)</span>
+  4011e7:	7d 05                	jge    4011ee <span class="token operator">&lt;</span>phase_6+0xfa<span class="token operator">&gt;</span>
+  4011e9:	e8 4c 02 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  4011ee:	<span class="token number">48</span> 8b 5b 08          	mov    0x8<span class="token punctuation">(</span>%rbx<span class="token punctuation">)</span>,%rbx
+  4011f2:	<span class="token number">83</span> ed 01             	sub    <span class="token variable">$0x1</span>,%ebp
+  4011f5:	<span class="token number">75</span> e8                	jne    4011df <span class="token operator">&lt;</span>phase_6+0xeb<span class="token operator">&gt;</span>
+  4011f7:	<span class="token number">48</span> <span class="token number">83</span> c4 <span class="token number">50</span>          	<span class="token function">add</span>    <span class="token variable">$0x50</span>,%rsp
+  4011fb:	5b                   	pop    %rbx
+  4011fc:	5d                   	pop    %rbp
+  4011fd:	<span class="token number">41</span> 5c                	pop    %r12
+  4011ff:	<span class="token number">41</span> 5d                	pop    %r13
+  <span class="token number">401201</span>:	<span class="token number">41</span> 5e                	pop    %r14
+  <span class="token number">401203</span>:	c3                   	retq   
+</pre><p>&#x4ED4;&#x7EC6;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x662F;&#xFF1A;<br>
+&#x901A;&#x8FC7;&#x6211;&#x4EEC;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6765;&#x8BFB;&#x53D6;6&#x4E2A;&#x6574;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x6574;&#x6570;&#x7684;&#x503C;&#x7684;&#x67D0;&#x79CD;&#x53D8;&#x5F62;&#x548C;&#x8BE5;&#x51FD;&#x6570;&#x6240;&#x7ED9;&#x5B9A;&#x7684;&#x94FE;&#x8868;&#xFF0C;&#x6765;&#x7EC4;&#x6210;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x503C;&#x6309;&#x964D;&#x5E8F;&#x6392;&#x5217;&#x7684;&#x94FE;&#x8868;&#x3002;</p>
+<p>&#x5176;&#x4E2D;&#x51FD;&#x6570;&#x6240;&#x7ED9;&#x5B9A;&#x7684;&#x6240;&#x7ED9;&#x5B9A;&#x7684;&#x94FE;&#x8868;&#x53EA;&#x663E;&#x793A;&#x4E86;&#x9996;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x548C;&#x4E4B;&#x524D;&#x4E00;&#x6837;&#xFF0C;&#x9700;&#x8981;&#x67E5;&#x627E;&#x8FD9;&#x4E9B;&#x8282;&#x70B9;&#x7684;&#x503C;&#x4EE5;&#x53CA;&#x5176;&#x6240;&#x8FDE;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;&#x662F;&#x4E0A;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5730;&#x5740;&#x52A0;8&#x7684;&#x89E3;&#x5F15;&#x7528;&#x3002;<br>
+<img src="image/2021-07-11-05-23-03.png" alt="str6"></li>
+<li>&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;&#x5C31;&#x662F;&#x8BE5;&#x8282;&#x70B9;&#x5730;&#x5740;&#x7684;&#x89E3;&#x5F15;&#x7528;&#x3002;<br>
+<img src="image/2021-07-11-05-25-39.png" alt="str7"></li>
+</ul>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x8BE5;&#x51FD;&#x6570;&#x6240;&#x7ED9;&#x7684;&#x94FE;&#x8868;&#x7684;&#x5404;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;&#x4E0E;&#x503C;&#xFF1A;</p>
+<div class="mermaid">graph LR
+head(0x6032d0 value:0x14c)--&gt;a(0x6032e0 value:0xa8)
+a--&gt;b(0x6032f0 value:0x39c)
+b--&gt;c(0x603300 value:0x2b3)
+c--&gt;d(0x603310 value:0x1dd)
+d--&gt;tail(0x603320 value:0x1bb)
+</div><p>&#x6240;&#x4EE5;<code>phase_6</code>&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token keyword keyword-void">void</span> <span class="token function">phase_6</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x50A8;&#x5B58;&#x51FD;&#x6570;&#x6240;&#x7ED9;&#x7684;&#x94FE;&#x8868;&#x7684;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;</span>
+    <span class="token keyword keyword-int">int</span><span class="token operator">*</span> ptrs<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x50A8;&#x5B58;&#x8BFB;&#x53D6;&#x7684;&#x6574;&#x6570;</span>
+    <span class="token keyword keyword-int">int</span> int_vals<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span><span class="token operator">*</span> vals_top <span class="token operator">=</span> int_vals<span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token operator">*</span> ptrs_top <span class="token operator">=</span> ptrs<span class="token punctuation">;</span>
+    <span class="token comment">// &#x8FDB;&#x884C;6&#x4E2A;&#x6574;&#x6570;&#x7684;&#x8BFB;&#x53D6;</span>
+    <span class="token function">read_six_numbers</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> vals_top<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// &#x6211;&#x4EEC;&#x6240;&#x8BFB;&#x53D6;&#x7684;&#x6240;&#x6709;&#x6574;&#x6570;&#x90FD;&#x8981;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x6761;&#x4EF6;&#xFF0C;&#x5426;&#x5219;&#x89E6;&#x53D1;&#x70B8;&#x5F39;</span>
+    <span class="token comment">// &#x6240;&#x6709;&#x7684;&#x503C;&#x8981;&#x5927;&#x4E8E;0&#xFF0C;&#x5C0F;&#x4E8E;7</span>
+    <span class="token comment">// &#x6240;&#x6709;&#x7684;&#x6574;&#x6570;&#x4E4B;&#x95F4;&#x4E0D;&#x80FD;&#x6709;&#x76F8;&#x540C;&#x7684;</span>
+    <span class="token keyword keyword-int">int</span><span class="token operator">*</span> num_iter <span class="token operator">=</span> vals_top<span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-do">do</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// &#x68C0;&#x67E5;&#x503C;&#x662F;&#x5426;&#x5927;&#x4E8E;0&#xFF0C;&#x5C0F;&#x4E8E;7</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>num_iter <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">&lt;=</span> <span class="token number">5</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// &#x9010;&#x4E2A;&#x68C0;&#x67E5;&#x6BCF;&#x4E2A;&#x6574;&#x6570;</span>
+            <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">++</span>count <span class="token operator">!=</span> <span class="token number">6</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword keyword-int">int</span> inner_count <span class="token operator">=</span> count<span class="token punctuation">;</span>
+                <span class="token comment">// &#x68C0;&#x67E5;&#x6574;&#x6570;&#x4E4B;&#x95F4;&#x662F;&#x5426;&#x6709;&#x91CD;&#x590D;&#x7684;</span>
+                <span class="token keyword keyword-do">do</span>
+                    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>num_iter <span class="token operator">==</span> <span class="token operator">*</span><span class="token punctuation">(</span>vals_top <span class="token operator">+</span> inner_count<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                        <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span><span class="token operator">++</span>inner_count <span class="token operator">&lt;=</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                num_iter <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-else">else</span>
+            <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>count <span class="token operator">!=</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// &#x6BCF;&#x4E2A;&#x6574;&#x6570;&#x7684;&#x503C;&#x90FD;&#x4F1A;&#x53D8;&#x6210;&#x5176;&#x503C;&#x51CF;7&#x7684;&#x76F8;&#x53CD;&#x6570;&#x7684;&#x503C;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>num_iter2 <span class="token operator">=</span> vals_top<span class="token punctuation">;</span>
+    <span class="token keyword keyword-do">do</span>
+        <span class="token operator">*</span>num_iter2 <span class="token operator">=</span> <span class="token number">7</span> <span class="token operator">-</span> <span class="token operator">*</span>num_iter2<span class="token punctuation">;</span>
+    <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span><span class="token operator">++</span>num_iter2 <span class="token operator">!=</span> vals_top <span class="token operator">+</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// &#x6839;&#x636E;&#x8BE5;&#x51FD;&#x6570;&#x6240;&#x7ED9;&#x7684;&#x94FE;&#x8868;&#x5730;&#x5740;&#x548C;&#x4E4B;&#x524D;&#x6574;&#x6570;&#x7684;&#x503C;</span>
+    <span class="token comment">// &#x5BF9;&#x94FE;&#x8868;&#x7684;&#x67D0;&#x4E9B;&#x8282;&#x70B9;&#x5730;&#x5740;&#x8FDB;&#x884C;&#x50A8;&#x5B58;</span>
+    <span class="token comment">// &#x50A8;&#x5B58;6&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>iter_num <span class="token operator">=</span> vals_top<span class="token punctuation">;</span>
+    <span class="token comment">// &#x8BE5;&#x51FD;&#x6570;&#x6240;&#x7ED9;&#x7684;&#x94FE;&#x8868;&#x8D77;&#x59CB;&#x5730;&#x5740;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x9996;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;</span>
+    <span class="token keyword keyword-int">int</span> spec_val <span class="token operator">=</span> <span class="token number">0x6032d0</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> count2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x6839;&#x636E;&#x4E4B;&#x524D;&#x7684;&#x6574;&#x6570;&#x503C;&#xFF0C;&#x9009;&#x62E9;&#x6240;&#x8981;&#x50A8;&#x5B58;&#x7684;&#x8282;&#x70B9;&#x5730;&#x5740;</span>
+    <span class="token comment">// &#x6574;&#x6570;&#x503C;&#x4E3A;1&#x5219;&#x50A8;&#x5B58;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;&#xFF0C;2&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;</span>
+    <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span><span class="token operator">*</span>iter_num <span class="token operator">&lt;=</span> <span class="token number">1</span> <span class="token operator">||</span> count2 <span class="token operator">!=</span> <span class="token number">6</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// &#x6839;&#x636E;&#x6574;&#x6570;&#x503C;&#x9009;&#x62E9;&#x8282;&#x70B9;&#x5730;&#x5740;</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>iter_num <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            spec_val <span class="token operator">=</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">0x6032d0</span><span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> count <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> count <span class="token operator">!=</span> <span class="token operator">*</span>iter_num<span class="token punctuation">;</span> <span class="token operator">++</span>count<span class="token punctuation">)</span>
+                spec_val <span class="token operator">=</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>spec_val<span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-else">else</span>
+            spec_val <span class="token operator">=</span> <span class="token number">0x6032d0</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x4ECE;&#x6307;&#x9488;&#x6570;&#x7EC4;&#x7684;&#x5F00;&#x5934;&#x5230;&#x672B;&#x5C3E;&#x7684;&#x987A;&#x5E8F;&#x9010;&#x4E2A;&#x50A8;&#x5B58;&#x8282;&#x70B9;&#x5730;&#x5740;</span>
+        <span class="token operator">*</span><span class="token punctuation">(</span>ptrs_top <span class="token operator">+</span> count2<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token punctuation">)</span>spec_val<span class="token punctuation">;</span>
+        <span class="token comment">// &#x5F53;&#x6307;&#x9488;&#x6570;&#x7EC4;&#x5168;&#x90FD;&#x50A8;&#x5B58;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x9000;&#x51FA;&#x50A8;&#x5B58;</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">++</span>count2 <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">)</span>
+            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x9010;&#x4E2A;&#x9009;&#x62E9;&#x6574;&#x6570;&#x503C;</span>
+        iter_num <span class="token operator">=</span> vals_top <span class="token operator">+</span> count2<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// &#x4F7F;&#x6307;&#x9488;&#x6570;&#x7EC4;&#x91CC;&#x6240;&#x50A8;&#x5B58;&#x7684;&#x5404;&#x4E2A;&#x8282;&#x70B9;&#x6309;&#x4ECE;&#x5F00;&#x5934;&#x5230;&#x672B;&#x5C3E;&#x7684;&#x987A;&#x5E8F;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#xFF0C;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x94FE;&#x8868;&#x3002;</span>
+    <span class="token keyword keyword-int">int</span><span class="token operator">*</span> rsp_32 <span class="token operator">=</span> <span class="token operator">*</span>ptrs_top<span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token operator">*</span> iter_ptr <span class="token operator">=</span> ptrs_top <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span><span class="token operator">*</span> temp_ptr <span class="token operator">=</span> rsp_32<span class="token punctuation">;</span>
+    <span class="token keyword keyword-do">do</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// &#x4F7F;&#x6570;&#x7EC4;&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6307;&#x5411;&#x6570;&#x7EC4;&#x7684;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;</span>
+        <span class="token operator">*</span><span class="token punctuation">(</span>temp_ptr <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">)</span><span class="token operator">*</span>iter_ptr<span class="token punctuation">;</span>
+        temp_ptr <span class="token operator">=</span> <span class="token operator">*</span>iter_ptr<span class="token punctuation">;</span>
+        iter_ptr <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>iter_ptr <span class="token operator">!=</span> ptrs_top <span class="token operator">+</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x5F62;&#x6210;&#x5C3E;&#x8282;&#x70B9;</span>
+    <span class="token operator">*</span>iter_ptr <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// &#x4ECE;&#x9996;&#x8282;&#x70B9;&#x5411;&#x5C3E;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x68C0;&#x67E5;&#xFF0C;&#x524D;&#x4E00;&#x8282;&#x70B9;&#x7684;&#x503C;&#x5FC5;&#x987B;&#x8981;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x540E;&#x4E00;&#x8282;&#x70B9;&#x7684;&#x503C;</span>
+    <span class="token comment">// &#x4E5F;&#x5C31;&#x662F;&#x8282;&#x70B9;&#x503C;&#x6309;&#x964D;&#x5E8F;&#x6392;&#x5217;&#x3002;</span>
+    <span class="token keyword keyword-int">int</span> count3 <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-do">do</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>rsp_32 <span class="token operator">&lt;</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>rsp_32 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        rsp_32 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>rsp_32 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span><span class="token operator">--</span>count3 <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h5 class="mume-header" id="362-%E7%AC%AC%E5%85%AD%E5%85%B3%E5%AF%86%E7%A0%81">3.62 &#x7B2C;&#x516D;&#x5173;&#x5BC6;&#x7801;</h5>
+
+<p>&#x7EFC;&#x4E0A;&#xFF0C;&#x7B2C;&#x516D;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x4E3A;<br>
+<code>4 3 2 1 6 5</code></p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x901A;&#x8FC7;&#x7B2C;&#x516D;&#x5173;&#x7684;&#x63D0;&#x793A;&#xFF1A;<br>
+<img src="image/2021-07-11-05-29-12.png" alt="pass6"></p>
+<p>&#x6211;&#x4EEC;&#x5728;&#x7834;&#x89E3;&#x5B8C;&#x7B2C;&#x516D;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x540E;&#xFF0C;&#x7A0B;&#x5E8F;&#x5C31;&#x5DF2;&#x7ECF;&#x663E;&#x793A;&#x6211;&#x4EEC;&#x6210;&#x529F;&#x62C6;&#x9664;&#x4E86;&#x70B8;&#x5F39;&#xFF0C;&#x5E76;&#x4E14;&#x7A0B;&#x5E8F;&#x4E5F;&#x6B63;&#x5E38;&#x7EC8;&#x6B62;&#x3002;<br>
+&#x8FD9;&#x4E5F;&#x5C31;&#x8BC1;&#x660E;&#x4E86;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x5B8C;&#x6210;&#x4E86;&#x62C6;&#x5F39;&#x4EFB;&#x52A1;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6536;&#x5DE5;&#x56DE;&#x5BB6;&#x54AF;&#xFF01;</p>
+<blockquote>
+<p>&#x70B8;&#x5F39;&#x771F;&#x7684;&#x62C6;&#x9664;&#x4E86;&#x5417;&#x2753;&#x1F608;</p>
+</blockquote>
+<h4 class="mume-header" id="37-%E5%BD%A9%E8%9B%8B%E5%85%B3">3.7 &#x5F69;&#x86CB;&#x5173;</h4>
+
+<p>&#x6B22;&#x8FCE;&#x6765;&#x5230;&#x9690;&#x85CF;&#x5173;&#x5361;&#xFF01;<br>
+&#x5176;&#x5B9E;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x9690;&#x85CF;&#x7684;&#x5173;&#x5361;&#xFF0C;&#x4E0D;&#x8FC7;&#x901A;&#x4E0D;&#x901A;&#x8FC7;&#x9690;&#x85CF;&#x5173;&#x5E76;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x6B63;&#x5E38;&#x7684;&#x6D41;&#x7A0B;&#xFF0C;&#x8FD9;&#x4E2A;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x5173;&#x5361;&#x3002;</p>
+<p>&#x7EC6;&#x5FC3;&#x7684;&#x540C;&#x5B66;&#x5728;&#x7834;&#x89E3;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;&#x7A0B;&#x5E8F;&#x7684;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x4E2D;&#x542B;&#x6709;&#x4E00;&#x4E2A;&#x53EB;&#x505A;<code>secret_phase</code>&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4E5F;&#x662F;&#x8BA9;&#x6211;&#x4EEC;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x5E76;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x5F15;&#x7206;&#x70B8;&#x5F39;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E5F;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x9690;&#x85CF;&#x5173;&#x6240;&#x8981;&#x7834;&#x89E3;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<blockquote>
+<p>&#x70B8;&#x5F39;&#x5236;&#x4F5C;&#x8005;&#x2014;&#x2014;&#x90AA;&#x6076;&#x535A;&#x58EB;&#x4E5F;&#x5728;&#x4ED6;&#x7684;<code>bomb.c</code>&#x6587;&#x4EF6;&#x4E2D;&#x6697;&#x793A;&#x8FC7;&#x9690;&#x85CF;&#x5173;&#x7684;&#x5B58;&#x5728;&#x3002;<br>
+<img src="image/2021-07-11-17-36-53.png" alt="secret"></p>
+</blockquote>
+<h5 class="mume-header" id="371-%E5%BD%A9%E8%9B%8B%E5%85%B3%E5%85%A5%E5%8F%A3">3.71 &#x5F69;&#x86CB;&#x5173;&#x5165;&#x53E3;</h5>
+
+<p>&#x53EF;&#x662F;&#x6211;&#x4EEC;&#x5728;&#x7B2C;&#x516D;&#x5173;&#x4EE5;&#x53CA;&#x524D;&#x9762;&#x7684;&#x5173;&#x5361;&#x6CA1;&#x6709;&#x9047;&#x5230;&#x8FC7;&#x8FDB;&#x5165;&#x9690;&#x85CF;&#x5173;&#x7684;&#x5165;&#x53E3;&#x554A;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x8FDB;&#x5165;&#x9690;&#x85CF;&#x5173;&#x5462;&#xFF1F;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x4E2D;&#x641C;&#x7D22;&#x4E00;&#x4E0B;<code>secret_phase</code>&#x540D;&#x5B57;&#xFF0C;&#x770B;&#x770B;&#x6709;&#x54EA;&#x4E2A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x4E86;<code>secret_phase</code>&#x51FD;&#x6570;&#x3002;<br>
+&#x679C;&#x4E0D;&#x5176;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x4E86;<code>phase_defused</code>&#x51FD;&#x6570;&#x8C03;&#x7528;&#x8FC7;&#x8FD9;&#x4E2A;&#x9690;&#x85CF;&#x5173;&#x51FD;&#x6570;&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#x5C31;&#x6CA1;&#x6709;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x8FC7;&#x4E86;&#x3002;<br>
+<img src="image/2021-07-11-20-26-50.png" alt="call_sec"></p>
+<p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x4ECE;<code>phase_defused</code>&#x51FD;&#x6570;&#x5165;&#x624B;&#xFF0C;&#x518D;&#x8C03;&#x67E5;&#x4E00;&#x4E0B;<code>phase_defused</code>&#x51FD;&#x6570;&#x7684;&#x88AB;&#x8C03;&#x7528;&#x60C5;&#x51B5;&#xFF0C;&#x53D1;&#x73B0;&#x6BCF;&#x901A;&#x8FC7;&#x4E00;&#x5173;&#xFF0C;<code>main</code>&#x51FD;&#x6570;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x4E00;&#x6B21;<code>phase_defused</code>&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;<code>phase_defused</code>&#x51FD;&#x6570;&#x53EF;&#x80FD;&#x4F1A;&#x6267;&#x884C;&#x901A;&#x5173;&#x5173;&#x5361;&#x7684;&#x67D0;&#x4E9B;&#x68C0;&#x67E5;&#x64CD;&#x4F5C;&#x3002;<br>
+<img src="image/2021-07-11-20-29-45.png" alt="chk_def"></p>
+<p>&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x9700;&#x8981;&#x5BF9;<code>phase_defused</code>&#x51FD;&#x6570;&#x7684;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x4EE5;&#x4E0B;&#x6211;&#x5BF9;<code>phase_defused</code>&#x51FD;&#x6570;&#x5206;&#x6790;&#x540E;&#x7684;&#x6C47;&#x7F16;&#x4EE3;&#x7801;(&#x5305;&#x542B;&#x6CE8;&#x91CA;)&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">00000000004015c4 <span class="token operator">&lt;</span>phase_defused<span class="token operator">&gt;</span>:
+  4015c4:	<span class="token number">48</span> <span class="token number">83</span> ec <span class="token number">78</span>          	sub    <span class="token variable">$0x78</span>,%rsp
+  4015c8:	<span class="token number">64</span> <span class="token number">48</span> 8b 04 <span class="token number">25</span> <span class="token number">28</span> 00 	mov    %fs:0x28,%rax
+  4015cf:	00 00 
+  4015d1:	<span class="token number">48</span> <span class="token number">89</span> <span class="token number">44</span> <span class="token number">24</span> <span class="token number">68</span>       	mov    %rax,0x68<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>
+  4015d6:	<span class="token number">31</span> c0                	xor    %eax,%eax
+  4015d8:	<span class="token number">83</span> 3d <span class="token number">81</span> <span class="token number">21</span> <span class="token number">20</span> 00 06 	cmpl   <span class="token variable">$0x6</span>,0x202181<span class="token punctuation">(</span>%rip<span class="token punctuation">)</span>        <span class="token comment"># 603760 &lt;num_input_strings&gt;</span>
+  4015df:	<span class="token number">75</span> 5e                	jne    40163f <span class="token operator">&lt;</span>phase_defused+0x7b<span class="token operator">&gt;</span>  <span class="token comment"># check whether it is in phase_6, execute the jump instruction if it isn&apos;t phase_6.</span>
+  <span class="token comment"># the passing of other phases won&apos;t enter the next steps except the passing of phase_6.</span>
+  4015e1:	4c 8d <span class="token number">44</span> <span class="token number">24</span> <span class="token number">10</span>       	lea    0x10<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%r8
+  4015e6:	<span class="token number">48</span> 8d 4c <span class="token number">24</span> 0c       	lea    0xc<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rcx
+  4015eb:	<span class="token number">48</span> 8d <span class="token number">54</span> <span class="token number">24</span> 08       	lea    0x8<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rdx
+  4015f0:	be <span class="token number">19</span> <span class="token number">26</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x402619</span>,%esi	<span class="token comment"># %d %d %s, </span>
+  4015f5:	bf <span class="token number">70</span> <span class="token number">38</span> <span class="token number">60</span> 00       	mov    <span class="token variable">$0x603870</span>,%edi	<span class="token comment"># record the print on phase_4.</span>
+  <span class="token comment"># only when pass the phase and print the extra chars in the end of codes on the phase_4, can be recorded by the address called 0x402619.</span>
+  4015fa:	e8 f1 f5 ff ff       	callq  400bf0 <span class="token operator">&lt;</span>__isoc99_sscanf@plt<span class="token operator">&gt;</span>
+  4015ff:	<span class="token number">83</span> f8 03             	<span class="token function">cmp</span>    <span class="token variable">$0x3</span>,%eax
+  <span class="token number">401602</span>:	<span class="token number">75</span> <span class="token number">31</span>                	jne    <span class="token number">401635</span> <span class="token operator">&lt;</span>phase_defused+0x7<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span>  <span class="token comment">#jump if the amount of matching isn&apos;t 3.</span>
+  <span class="token number">401604</span>:	be <span class="token number">22</span> <span class="token number">26</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x402622</span>,%esi	<span class="token comment">#DrEvil</span>
+  <span class="token number">401609</span>:	<span class="token number">48</span> 8d 7c <span class="token number">24</span> <span class="token number">10</span>       	lea    0x10<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rdi
+  40160e:	e8 <span class="token number">25</span> fd ff ff       	callq  <span class="token number">401338</span> <span class="token operator">&lt;</span>strings_not_equal<span class="token operator">&gt;</span>  <span class="token comment">#compare whether the extra chars is same as the string called &quot;DrEvil&quot;.</span>
+  <span class="token number">401613</span>:	<span class="token number">85</span> c0                	<span class="token builtin class-name">test</span>   %eax,%eax
+  <span class="token number">401615</span>:	<span class="token number">75</span> 1e                	jne    <span class="token number">401635</span> <span class="token operator">&lt;</span>phase_defused+0x7<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span>  <span class="token comment"># jump if it isn&apos;t same.</span>
+  <span class="token number">401617</span>:	bf f8 <span class="token number">24</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x4024f8</span>,%edi	<span class="token comment">#Curses, you&apos;ve found the secret phase!</span>
+  40161c:	e8 ef f4 ff ff       	callq  400b10 <span class="token operator">&lt;</span>puts@plt<span class="token operator">&gt;</span>	<span class="token comment"># print the string above.</span>
+  <span class="token number">401621</span>:	bf <span class="token number">20</span> <span class="token number">25</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x402520</span>,%edi	<span class="token comment">#But finding it and solving it are quite different...</span>
+  <span class="token number">401626</span>:	e8 e5 f4 ff ff       	callq  400b10 <span class="token operator">&lt;</span>puts@plt<span class="token operator">&gt;</span>	<span class="token comment">#print the string above.</span>
+  40162b:	b8 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%eax
+  <span class="token number">401630</span>:	e8 0d fc ff ff       	callq  <span class="token number">401242</span> <span class="token operator">&lt;</span>secret_phase<span class="token operator">&gt;</span>	<span class="token comment">#enter the secret phase.</span>
+  <span class="token number">401635</span>:	bf <span class="token number">58</span> <span class="token number">25</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x402558</span>,%edi	<span class="token comment">#Congratulations! You&apos;ve defused the bomb!</span>
+  40163a:	e8 d1 f4 ff ff       	callq  400b10 <span class="token operator">&lt;</span>puts@plt<span class="token operator">&gt;</span>	<span class="token comment">#print the congratulation when pass all phases.</span>
+  40163f:	<span class="token number">48</span> 8b <span class="token number">44</span> <span class="token number">24</span> <span class="token number">68</span>       	mov    0x68<span class="token punctuation">(</span>%rsp<span class="token punctuation">)</span>,%rax
+  <span class="token number">401644</span>:	<span class="token number">64</span> <span class="token number">48</span> <span class="token number">33</span> 04 <span class="token number">25</span> <span class="token number">28</span> 00 	xor    %fs:0x28,%rax
+  40164b:	00 00 
+  40164d:	<span class="token number">74</span> 05                	je     <span class="token number">401654</span> <span class="token operator">&lt;</span>phase_defused+0x9<span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>	<span class="token comment"># check the status of buff overflow.</span>
+  40164f:	e8 <span class="token function">dc</span> f4 ff ff       	callq  400b30 <span class="token operator">&lt;</span>__stack_chk_fail@plt<span class="token operator">&gt;</span>
+  <span class="token number">401654</span>:	<span class="token number">48</span> <span class="token number">83</span> c4 <span class="token number">78</span>          	<span class="token function">add</span>    <span class="token variable">$0x78</span>,%rsp
+  <span class="token number">401658</span>:	c3                   	retq   
+  <span class="token number">401659</span>:	<span class="token number">90</span>                   	nop
+  40165a:	<span class="token number">90</span>                   	nop
+  40165b:	<span class="token number">90</span>                   	nop
+  40165c:	<span class="token number">90</span>                   	nop
+  40165d:	<span class="token number">90</span>                   	nop
+  40165e:	<span class="token number">90</span>                   	nop
+  40165f:	<span class="token number">90</span>                   	nop
+</pre><p>&#x7ECF;&#x8FC7;&#x5206;&#x6790;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x9690;&#x85CF;&#x5173;&#x7684;&#x5165;&#x53E3;&#x5728;&#x7B2C;&#x56DB;&#x5173;&#x91CC;&#xFF1A;<br>
+&#x6211;&#x4EEC;&#x8981;&#x60F3;&#x8FDB;&#x5165;&#x9690;&#x85CF;&#x5173;&#xFF0C;&#x5C31;&#x8981;&#x5728;&#x8F93;&#x5165;&#x7B2C;&#x56DB;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x65F6;&#x5728;&#x540E;&#x9762;&#x52A0;&#x4E0A;&#x90AA;&#x6076;&#x535A;&#x58EB;&#x7684;&#x540D;&#x5B57;<code>DrEvil</code>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7B2C;&#x56DB;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x53D8;&#x4E3A;<code>7 0 DrEvil</code>&#x3002;<br>
+<img src="image/2021-07-11-20-39-48.png" alt="new_code"></p>
+<p>&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x80FD;&#x5728;&#x901A;&#x8FC7;&#x7B2C;&#x516D;&#x5173;&#x65F6;&#x8FDB;&#x5165;&#x9690;&#x85CF;&#x5173;&#x4E86;&#xFF01;<br>
+&#x4EE5;&#x4E0B;&#x662F;&#x8FDB;&#x5165;&#x9690;&#x85CF;&#x5173;&#x540E;&#x7684;&#x63D0;&#x793A;&#x754C;&#x9762;&#xFF1A;<br>
+<img src="image/2021-07-11-20-41-39.png" alt="enter_sec"></p>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x5C31;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x7834;&#x89E3;&#x9690;&#x85CF;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x5427;&#xFF01;</p>
+<h5 class="mume-header" id="372-fun7%E5%87%BD%E6%95%B0">3.72 fun7&#x51FD;&#x6570;</h5>
+
+<p>&#x6211;&#x4EEC;&#x5BF9;<code>secret_phase</code>&#x51FD;&#x6570;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x5176;&#x8C03;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>fun7</code>&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5BF9;<code>fun7</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x8BE5;&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x6709;&#x4E24;&#x4E2A;&#x5F62;&#x53C2;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5F62;&#x53C2;&#x5E94;&#x8BE5;&#x4E3A;int&#x6307;&#x9488;&#xFF0C;&#x8868;&#x793A;&#x67D0;&#x4E8C;&#x53C9;&#x6570;&#x7684;&#x6839;&#x8282;&#x70B9;&#xFF1B;&#x7B2C;&#x4E8C;&#x4E2A;&#x5F62;&#x53C2;&#x5E94;&#x8BE5;&#x4E3A;int&#x578B;&#x3002;<br>
+&#x8BE5;&#x51FD;&#x6570;&#x4E2D;&#x5B58;&#x5728;&#x9012;&#x5F52;&#x8C03;&#x7528;&#x3002;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">0000000000401204 <span class="token operator">&lt;</span>fun<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span>:
+  <span class="token number">401204</span>:	<span class="token number">48</span> <span class="token number">83</span> ec 08          	sub    <span class="token variable">$0x8</span>,%rsp
+  <span class="token number">401208</span>:	<span class="token number">48</span> <span class="token number">85</span> ff             	<span class="token builtin class-name">test</span>   %rdi,%rdi
+  40120b:	<span class="token number">74</span> 2b                	je     <span class="token number">401238</span> <span class="token operator">&lt;</span>fun7+0x3<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+  40120d:	8b <span class="token number">17</span>                	mov    <span class="token punctuation">(</span>%rdi<span class="token punctuation">)</span>,%edx
+  40120f:	<span class="token number">39</span> f2                	<span class="token function">cmp</span>    %esi,%edx
+  <span class="token number">401211</span>:	7e 0d                	jle    <span class="token number">401220</span> <span class="token operator">&lt;</span>fun7+0x1c<span class="token operator">&gt;</span>
+  <span class="token number">401213</span>:	<span class="token number">48</span> 8b 7f 08          	mov    0x8<span class="token punctuation">(</span>%rdi<span class="token punctuation">)</span>,%rdi
+  <span class="token number">401217</span>:	e8 e8 ff ff ff       	callq  <span class="token number">401204</span> <span class="token operator">&lt;</span>fun<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span>
+  40121c:	01 c0                	<span class="token function">add</span>    %eax,%eax
+  40121e:	eb 1d                	jmp    40123d <span class="token operator">&lt;</span>fun7+0x3<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+  <span class="token number">401220</span>:	b8 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%eax
+  <span class="token number">401225</span>:	<span class="token number">39</span> f2                	<span class="token function">cmp</span>    %esi,%edx
+  <span class="token number">401227</span>:	<span class="token number">74</span> <span class="token number">14</span>                	je     40123d <span class="token operator">&lt;</span>fun7+0x3<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+  <span class="token number">401229</span>:	<span class="token number">48</span> 8b 7f <span class="token number">10</span>          	mov    0x10<span class="token punctuation">(</span>%rdi<span class="token punctuation">)</span>,%rdi
+  40122d:	e8 d2 ff ff ff       	callq  <span class="token number">401204</span> <span class="token operator">&lt;</span>fun<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span>
+  <span class="token number">401232</span>:	8d <span class="token number">44</span> 00 01          	lea    0x1<span class="token punctuation">(</span>%rax,%rax,1<span class="token punctuation">)</span>,%eax
+  <span class="token number">401236</span>:	eb 05                	jmp    40123d <span class="token operator">&lt;</span>fun7+0x3<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+  <span class="token number">401238</span>:	b8 ff ff ff ff       	mov    <span class="token variable">$0xffffffff</span>,%eax
+  40123d:	<span class="token number">48</span> <span class="token number">83</span> c4 08          	<span class="token function">add</span>    <span class="token variable">$0x8</span>,%rsp
+  <span class="token number">401241</span>:	c3                   	retq     
+</pre><p>&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x662F;&#xFF1A;<br>
+&#x7528;&#x6765;&#x67E5;&#x627E;&#x6240;&#x7ED9;&#x7684;&#x503C;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4E8E;&#x6240;&#x7ED9;&#x7684;&#x4E8C;&#x53C9;&#x6392;&#x5E8F;&#x6811;&#x4E2D;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x67D0;&#x79CD;&#x4F4D;&#x7F6E;&#x7F16;&#x53F7;&#x3002;</p>
+<p>&#x6240;&#x4EE5;<code>fun7</code>&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token comment">// &#x8BE5;&#x51FD;&#x6570;&#x662F;&#x7528;&#x6765;&#x67E5;&#x627E;&#x6240;&#x7ED9;&#x7684;&#x6574;&#x6570;&#x503C;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4E8E;&#x6240;&#x7ED9;&#x7684;&#x4E8C;&#x53C9;&#x6392;&#x5E8F;&#x6811;&#x4E2D;</span>
+<span class="token comment">// &#x5E76;&#x8FD4;&#x56DE;&#x67D0;&#x79CD;&#x4F4D;&#x7F6E;&#x7F16;&#x53F7;</span>
+<span class="token keyword keyword-int">int</span> <span class="token function">fun7</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token operator">*</span> root<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> val<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x5F53;&#x6811;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;-1</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> 
+        <span class="token keyword keyword-return">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x5F53;val&#x7B49;&#x4E8E;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x503C;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;0</span>
+    <span class="token comment">// &#x5F53;val&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x503C;&#x65F6;&#xFF0C;&#x8FDB;&#x5165;&#x53F3;&#x5B50;&#x8282;&#x70B9;&#x7EE7;&#x7EED;&#x67E5;&#x627E;</span>
+    <span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>root <span class="token operator">&lt;=</span> val<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>root <span class="token operator">==</span> val<span class="token punctuation">)</span>
+            <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-else">else</span>
+            <span class="token keyword keyword-return">return</span> <span class="token function">fun7</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>root <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// &#x5F53;val&#x5C0F;&#x4E8E;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x503C;&#x65F6;&#xFF0C;&#x8FDB;&#x5165;&#x5DE6;&#x5B50;&#x8282;&#x70B9;&#x7EE7;&#x7EED;&#x67E5;&#x627E;</span>
+    <span class="token keyword keyword-else">else</span>
+        <span class="token keyword keyword-return">return</span> <span class="token function">fun7</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>root <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h5 class="mume-header" id="373-secret_phase%E5%87%BD%E6%95%B0">3.73 secret_phase&#x51FD;&#x6570;</h5>
+
+<p>&#x5BF9;<code>secret_phase</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">0000000000401242 <span class="token operator">&lt;</span>secret_phase<span class="token operator">&gt;</span>:
+  <span class="token number">401242</span>:	<span class="token number">53</span>                   	push   %rbx
+  <span class="token number">401243</span>:	e8 <span class="token number">56</span> 02 00 00       	callq  40149e <span class="token operator">&lt;</span>read_line<span class="token operator">&gt;</span>
+  <span class="token number">401248</span>:	ba 0a 00 00 00       	mov    <span class="token variable">$0xa</span>,%edx
+  40124d:	be 00 00 00 00       	mov    <span class="token variable">$0x0</span>,%esi
+  <span class="token number">401252</span>:	<span class="token number">48</span> <span class="token number">89</span> c7             	mov    %rax,%rdi
+  <span class="token number">401255</span>:	e8 <span class="token number">76</span> f9 ff ff       	callq  400bd0 <span class="token operator">&lt;</span>strtol@plt<span class="token operator">&gt;</span>
+  40125a:	<span class="token number">48</span> <span class="token number">89</span> c3             	mov    %rax,%rbx
+  40125d:	8d <span class="token number">40</span> ff             	lea    -0x1<span class="token punctuation">(</span>%rax<span class="token punctuation">)</span>,%eax
+  <span class="token number">401260</span>:	3d e8 03 00 00       	<span class="token function">cmp</span>    <span class="token variable">$0x3e8</span>,%eax
+  <span class="token number">401265</span>:	<span class="token number">76</span> 05                	jbe    40126c <span class="token operator">&lt;</span>secret_phase+0x2a<span class="token operator">&gt;</span>
+  <span class="token number">401267</span>:	e8 ce 01 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  40126c:	<span class="token number">89</span> de                	mov    %ebx,%esi
+  40126e:	bf f0 <span class="token number">30</span> <span class="token number">60</span> 00       	mov    <span class="token variable">$0x6030f0</span>,%edi
+  <span class="token number">401273</span>:	e8 8c ff ff ff       	callq  <span class="token number">401204</span> <span class="token operator">&lt;</span>fun<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span>
+  <span class="token number">401278</span>:	<span class="token number">83</span> f8 02             	<span class="token function">cmp</span>    <span class="token variable">$0x2</span>,%eax
+  40127b:	<span class="token number">74</span> 05                	je     <span class="token number">401282</span> <span class="token operator">&lt;</span>secret_phase+0x4<span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>
+  40127d:	e8 b8 01 00 00       	callq  40143a <span class="token operator">&lt;</span>explode_bomb<span class="token operator">&gt;</span>
+  <span class="token number">401282</span>:	bf <span class="token number">38</span> <span class="token number">24</span> <span class="token number">40</span> 00       	mov    <span class="token variable">$0x402438</span>,%edi
+  <span class="token number">401287</span>:	e8 <span class="token number">84</span> f8 ff ff       	callq  400b10 <span class="token operator">&lt;</span>puts@plt<span class="token operator">&gt;</span>
+  40128c:	e8 <span class="token number">33</span> 03 00 00       	callq  4015c4 <span class="token operator">&lt;</span>phase_defused<span class="token operator">&gt;</span>
+  <span class="token number">401291</span>:	5b                   	pop    %rbx
+  <span class="token number">401292</span>:	c3                   	retq   
+  <span class="token number">401293</span>:	<span class="token number">90</span>                   	nop
+  <span class="token number">401294</span>:	<span class="token number">90</span>                   	nop
+  <span class="token number">401295</span>:	<span class="token number">90</span>                   	nop
+  <span class="token number">401296</span>:	<span class="token number">90</span>                   	nop
+  <span class="token number">401297</span>:	<span class="token number">90</span>                   	nop
+  <span class="token number">401298</span>:	<span class="token number">90</span>                   	nop
+  <span class="token number">401299</span>:	<span class="token number">90</span>                   	nop
+  40129a:	<span class="token number">90</span>                   	nop
+  40129b:	<span class="token number">90</span>                   	nop
+  40129c:	<span class="token number">90</span>                   	nop
+  40129d:	<span class="token number">90</span>                   	nop
+  40129e:	<span class="token number">90</span>                   	nop
+  40129f:	<span class="token number">90</span>                   	nop
+</pre><p>&#x5BF9;<code>secret_phase</code>&#x51FD;&#x6570;&#x5206;&#x6790;&#x540E;&#xFF0C;&#x53D1;&#x73B0;&#x5176;&#x8C03;&#x7528;<code>strtol</code>&#x51FD;&#x6570;&#x6765;&#x5C06;&#x8BFB;&#x53D6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;&#x6574;&#x6570;&#xFF1B;&#x4E14;&#x8BE5;&#x51FD;&#x6570;&#x8FD8;&#x8C03;&#x7528;<code>fun7</code>&#x51FD;&#x6570;&#x6765;&#x5224;&#x65AD;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x503C;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4E8E;&#x6240;&#x7ED9;&#x7684;&#x4E8C;&#x53C9;&#x6392;&#x5E8F;&#x6811;&#x7684;&#x7279;&#x5B9A;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x5176;&#x4E2D;&#x51FD;&#x6570;&#x6240;&#x7ED9;&#x7684;&#x4E8C;&#x53C9;&#x6392;&#x5E8F;&#x6811;&#x53EA;&#x663E;&#x793A;&#x4E86;&#x6839;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x548C;&#x4E4B;&#x524D;&#x4E00;&#x6837;&#xFF0C;&#x9700;&#x8981;&#x67E5;&#x627E;&#x8FD9;&#x4E9B;&#x8282;&#x70B9;&#x7684;&#x503C;&#x4EE5;&#x53CA;&#x5176;&#x6240;&#x8FDE;&#x7684;&#x5DE6;&#x53F3;&#x5B50;&#x8282;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x5DE6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;&#x662F;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;&#x52A0;8&#x7684;&#x89E3;&#x5F15;&#x7528;&#x3002;<br>
+<img src="image/2021-07-11-17-09-59.png" alt="str8"></li>
+<li>&#x53F3;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;&#x662F;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;&#x52A0;16&#x7684;&#x89E3;&#x5F15;&#x7528;&#x3002;<br>
+<img src="image/2021-07-11-17-11-18.png" alt="str9"></li>
+<li>&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;&#x5C31;&#x662F;&#x8BE5;&#x8282;&#x70B9;&#x5730;&#x5740;&#x7684;&#x89E3;&#x5F15;&#x7528;&#x3002;<br>
+<img src="image/2021-07-11-17-12-31.png" alt="str10"></li>
+</ul>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x8BE5;&#x51FD;&#x6570;&#x6240;&#x7ED9;&#x7684;&#x4E8C;&#x53C9;&#x6392;&#x5E8F;&#x6811;&#x7684;&#x5404;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;&#x4E0E;&#x503C;&#xFF1A;</p>
+<div class="mermaid">graph TB
+root(0x6030f0 value:0x24)--&gt;a1(0x603110 value:0x8)
+root--&gt;a2(0x603130 value:0x32)
+a1--&gt;b1(0x603190 value:0x6)
+a1--&gt;b2(0x603150 value:0x16)
+a2--&gt;b3(0x603170 value:0x2d)
+a2--&gt;b4(0x6031b0 value:0x6b)
+b1--&gt;c1(0x6031f0 value:0x1)
+b1--&gt;c2(0x603250 value:0x7)
+b2--&gt;c3(0x603270 value:0x14)
+b2--&gt;c4(0x603230 value:0x23)
+b3--&gt;c5(0x6031d0 value:0x28)
+b3--&gt;c6(0x603290 value:0x2f)
+b4--&gt;c7(0x603210 value:0x63)
+b4--&gt;c8(0x6032b0 value:0x3e9)
+</div><p>&#x6240;&#x4EE5;<code>secret_phase</code>&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token keyword keyword-void">void</span> <span class="token function">secret_phase</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x8BE5;&#x51FD;&#x6570;&#x5C06;&#x6211;&#x4EEC;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;&#x6574;&#x6570;</span>
+    <span class="token comment">// &#x8BE5;&#x6574;&#x6570;&#x5FC5;&#x987B;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;1001&#xFF0C;&#x4E14;&#x8BE5;&#x6574;&#x6570;&#x503C;&#x5FC5;&#x987B;&#x8981;&#x4F7F;fun7&#x8FD4;&#x56DE;2&#xFF0C;&#x5426;&#x5219;&#x89E6;&#x53D1;&#x70B8;&#x5F39;</span>
+    <span class="token comment">// 0x6030f0&#x662F;&#x6240;&#x7ED9;&#x7684;&#x4E8C;&#x53C9;&#x6392;&#x5E8F;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;</span>
+    <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> val <span class="token operator">=</span> <span class="token function">strtol</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>val <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">&gt;</span> <span class="token number">1000</span> <span class="token operator">||</span> <span class="token function">fun7</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token number">0x6030f0</span><span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">2</span><span class="token punctuation">)</span>
+        <span class="token function">explode_bomb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h5 class="mume-header" id="374-%E5%BD%A9%E8%9B%8B%E5%85%B3%E5%AF%86%E7%A0%81">3.74 &#x5F69;&#x86CB;&#x5173;&#x5BC6;&#x7801;</h5>
+
+<p>&#x7EFC;&#x4E0A;&#xFF0C;&#x5F69;&#x86CB;&#x5173;&#x7684;&#x5BC6;&#x7801;&#x4E3A;<br>
+<code>22</code></p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x901A;&#x8FC7;&#x5F69;&#x86CB;&#x5173;&#x7684;&#x63D0;&#x793A;&#xFF1A;<br>
+<img src="image/2021-07-11-20-43-56.png" alt="pass7"></p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x624D;&#x771F;&#x6B63;&#x7684;&#x7834;&#x89E3;&#x4E86;&#x70B8;&#x5F39;&#x7684;&#x6240;&#x6709;&#x5BC6;&#x7801;&#xFF0C;&#x771F;&#x6B63;&#x7684;&#x62C6;&#x9664;&#x4E86;&#x70B8;&#x5F39;&#xFF0C;&#x6B64;&#x65F6;&#xFF0C;&#x5B9E;&#x9A8C;&#x624D;&#x662F;&#x771F;&#x6B63;&#x7684;&#x5706;&#x6EE1;&#x5B8C;&#x6210;&#xFF01;&#x1F600;</p>
+<h3 class="mume-header" id="4%E6%80%BB%E7%BB%93">4.&#x603B;&#x7ED3;</h3>
+
+<p>&#x8FD9;&#x4E2A;&#x5B9E;&#x9A8C;&#x7684;&#x96BE;&#x5EA6;&#x5BF9;&#x4E8E;&#x6211;&#x6765;&#x8BF4;&#x8FD8;&#x662F;&#x975E;&#x5E38;&#x5927;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x4E4B;&#x524D;&#x5E76;&#x6CA1;&#x6709;&#x5B66;&#x4E60;&#x8FC7;&#x6C47;&#x7F16;&#x65B9;&#x9762;&#x7684;&#x77E5;&#x8BC6;&#xFF0C;&#x6240;&#x4EE5;&#x9762;&#x5BF9;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x65F6;&#x770B;&#x7684;&#x5F88;&#x75DB;&#x82E6;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x7B2C;6&#x5173;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5404;&#x79CD;&#x8DF3;&#x8F6C;&#x6307;&#x4EE4;&#x5939;&#x6742;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x770B;&#x7684;&#x5F02;&#x5E38;&#x7684;&#x5934;&#x75DB;&#xFF01;</p>
+<p>&#x5BF9;&#x4E8E;&#x6C47;&#x7F16;&#x8BED;&#x8A00;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x548C;&#x5176;&#x4ED6;&#x7684;&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;&#x4E00;&#x6837;&#xFF0C;&#x591A;&#x7EC3;&#x4E60;&#xFF0C;&#x591A;&#x7FFB;&#x8BD1;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x6709;&#x5F88;&#x5927;&#x7684;&#x8FDB;&#x6B65;&#xFF01;</p>
+
+      </div>
+      
+      
+    
+    
+    <script>
+// config mermaid init call
+// http://knsv.github.io/mermaid/#configuration
+//
+// You can edit the 'MERMAID_CONFIG' variable below.
+MERMAID_CONFIG = {
+  startOnLoad: false
+}
+
+if (window['MERMAID_CONFIG']) {
+  window['MERMAID_CONFIG'].startOnLoad = false
+  window['MERMAID_CONFIG'].cloneCssStyles = false
+  window['MERMAID_CONFIG'].theme = "default"
+}
+mermaid.initialize(window['MERMAID_CONFIG'] || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+} else {
+  mermaid.init(null, document.getElementsByClassName('mermaid'))
+}
+</script>
+    
+    
+    
+    
+    
+  
+    </body></html>
