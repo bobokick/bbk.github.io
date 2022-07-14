@@ -1,9 +1,9 @@
 <!DOCTYPE html><html><head>
-      <title>readme</title>
+      <title>&#x7B2C;1&#x7AE0;_&#x9884;&#x5904;&#x7406;&#x6307;&#x4EE4;</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:///c:\Users\gamejun88\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.1\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="file:///c:\Users\bbk\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
       
       
       
@@ -780,15 +780,19 @@ cout <span class="token operator">&lt;&lt;</span> ins<span class="token punctuat
 <pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token comment">// &#x5B9A;&#x4E49;&#x8F93;&#x51FA;&#x529F;&#x80FD;&#x7684;&#x5B8F;</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">stringer</span><span class="token expression"><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token function">printf_s</span><span class="token punctuation">(</span> #x </span><span class="token string">&quot;\n&quot;</span> <span class="token expression"><span class="token punctuation">)</span></span></span>
-<span class="token comment">// &#x7B49;&#x4EF7;&#x4E8E;printf_s( &quot;In quotes in the printf function call&quot; &quot;\n&quot; );</span>
-<span class="token comment">// &#x8F93;&#x51FA;&#x4E3A;In quotes in the printf function call</span>
-<span class="token function">printf_s</span><span class="token punctuation">(</span> <span class="token string">&quot;In quotes in the printf function call&quot;</span> <span class="token string">&quot;\n&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// &#x7B49;&#x4EF7;&#x4E8E;printf_s( &quot;\&quot;In quotes when printed to the screen\&quot;&quot; &quot;\n&quot; );</span>
-<span class="token comment">// &#x8F93;&#x51FA;&#x4E3A;&quot;In quotes when printed to the screen&quot;</span>
-<span class="token function">printf_s</span><span class="token punctuation">(</span> <span class="token string">&quot;\&quot;In quotes when printed to the screen\&quot;&quot;</span> <span class="token string">&quot;\n&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// &#x7B49;&#x4EF7;&#x4E8E;printf_s( &quot;\&quot;This: \\\&quot; prints an escaped double quote\&quot;&quot; &quot;\n&quot; );</span>
-<span class="token comment">// &#x8F93;&#x51FA;&#x4E3A;&quot;This: \&quot;  prints an escaped double quote&quot;</span>
-<span class="token function">printf_s</span><span class="token punctuation">(</span> <span class="token string">&quot;\&quot;This: \\\&quot; prints an escaped double quote\&quot;&quot;</span> <span class="token string">&quot;\n&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x7B49;&#x4EF7;&#x4E8E;printf_s( &quot;In quotes in the printf function call&quot; &quot;\n&quot; );</span>
+    <span class="token comment">// &#x8F93;&#x51FA;&#x4E3A;In quotes in the printf function call</span>
+    <span class="token function">stringer</span><span class="token punctuation">(</span> In quotes in the printf function call <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7B49;&#x4EF7;&#x4E8E;printf_s( &quot;\&quot;In quotes when printed to the screen\&quot;&quot; &quot;\n&quot; );</span>
+    <span class="token comment">// &#x8F93;&#x51FA;&#x4E3A;&quot;In quotes when printed to the screen&quot;</span>
+    <span class="token function">stringer</span><span class="token punctuation">(</span><span class="token string">&quot;In quotes when printed to the screen&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7B49;&#x4EF7;&#x4E8E;printf_s( &quot;\&quot;This: \\\&quot; prints an escaped double quote\&quot;&quot; &quot;\n&quot; );</span>
+    <span class="token comment">// &#x8F93;&#x51FA;&#x4E3A;&quot;This: \&quot;  prints an escaped double quote&quot;</span>
+    <span class="token function">stringer</span><span class="token punctuation">(</span> <span class="token string">&quot;This: \&quot; prints an escaped double quote&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </pre><p><strong>&#x8BCD;&#x6CD5;&#x5143;&#x7D20;&#x7C98;&#x8D34;&#x8FD0;&#x7B97;&#x7B26;(##)</strong></p>
 <p>&#x8BCD;&#x6CD5;&#x5143;&#x7D20;&#x7C98;&#x8D34;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x6709;&#x65F6;&#x79F0;&#x4E3A;&#x5408;&#x5E76;&#x8FD0;&#x7B97;&#x7B26;&#x6216;&#x7EC4;&#x5408;&#x8FD0;&#x7B97;&#x7B26;&#x3002;&#x8BE5;&#x8FD0;&#x7B97;&#x7B26;&#x53EF;&#x7528;&#x4E8E;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x5B8F;&#x3002;</p>
 <p>&#x8BCD;&#x6CD5;&#x5143;&#x7D20;&#x7C98;&#x8D34;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x8FDE;&#x63A5;&#x4E24;&#x4E2A;&#x8BCD;&#x6CD5;&#x5143;&#x7D20;&#xFF0C;&#x4F7F;&#x5176;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x8BCD;&#x6CD5;&#x5143;&#x7D20;&#x3002;</p>
