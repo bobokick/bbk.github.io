@@ -3955,19 +3955,148 @@ Ba destructed!</span>
 </ul>
 <h3 class="mume-header" id="795-%E6%8B%B7%E8%B4%9D%E6%8E%A7%E5%88%B6%E6%88%90%E5%91%98%E7%9A%84%E5%90%88%E6%88%90%E7%89%88%E6%9C%AC">7.95 &#x62F7;&#x8D1D;&#x63A7;&#x5236;&#x6210;&#x5458;&#x7684;&#x5408;&#x6210;&#x7248;&#x672C;</h3>
 
-<p>&#x548C;&#x666E;&#x901A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E00;&#x6837;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x62F7;&#x8D1D;&#x63A7;&#x5236;&#x6210;&#x5458;&#x90FD;&#x6709;&#x7F16;&#x8BD1;&#x5668;&#x81EA;&#x52A8;&#x5408;&#x6210;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x4E5F;&#x5206;&#x4E3A;&#x9690;&#x5F0F;&#x5408;&#x6210;&#x548C;&#x663E;&#x5F0F;&#x5408;&#x6210;&#x3002;<br>
-&#x5404;&#x4E2A;&#x62F7;&#x8D1D;&#x63A7;&#x5236;&#x6210;&#x5458;&#x7684;&#x5408;&#x6210;&#x7248;&#x672C;&#x7684;&#x51FD;&#x6570;&#x4F53;&#x90FD;&#x4E3A;&#x7A7A;&#x3002;</p>
-<p>&#x4EE5;&#x4E0B;&#x4E3A;&#x5404;&#x4E2A;&#x62F7;&#x8D1D;&#x63A7;&#x5236;&#x6210;&#x5458;&#x7684;&#x51FD;&#x6570;&#x58F0;&#x660E;&#xFF0C;&#x5047;&#x8BBE;&#x7C7B;&#x540D;&#x4E3A;<code>Cls</code>&#xFF1A;</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token comment">// &#x5408;&#x6210;&#x7684;&#x62F7;&#x8D1D;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
-<span class="token function">Cls</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> Cls<span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// &#x5408;&#x6210;&#x7684;&#x79FB;&#x52A8;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
-<span class="token function">Cls</span><span class="token punctuation">(</span>Cls<span class="token operator">&amp;&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// &#x5408;&#x6210;&#x7684;&#x62F7;&#x8D1D;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</span>
-Cls<span class="token operator">&amp;</span> <span class="token keyword keyword-operator">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> Cls<span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// &#x5408;&#x6210;&#x7684;&#x79FB;&#x52A8;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</span>
-Cls<span class="token operator">&amp;</span> <span class="token keyword keyword-operator">operator</span><span class="token operator">=</span><span class="token punctuation">(</span>Cls<span class="token operator">&amp;&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// &#x5408;&#x6210;&#x7684;&#x6790;&#x6784;&#x51FD;&#x6570;</span>
-<span class="token operator">~</span><span class="token function">Cls</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>&#x548C;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E00;&#x6837;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x62F7;&#x8D1D;&#x63A7;&#x5236;&#x6210;&#x5458;&#x90FD;&#x6709;&#x7F16;&#x8BD1;&#x5668;&#x81EA;&#x52A8;&#x5408;&#x6210;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x4E5F;&#x5206;&#x4E3A;&#x9690;&#x5F0F;&#x5408;&#x6210;&#x548C;&#x663E;&#x5F0F;&#x5408;&#x6210;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x62F7;&#x8D1D;&#x63A7;&#x5236;&#x6210;&#x5458;&#x7684;&#x5408;&#x6210;&#x7248;&#x672C;&#x90FD;&#x6709;&#x5982;&#x4E0B;&#x7279;&#x6027;&#xFF1A;</p>
+<ol>
+<li>&#x6240;&#x6709;&#x975E;&#x6790;&#x6784;&#x51FD;&#x6570;&#x7684;&#x62F7;&#x8D1D;&#x63A7;&#x5236;&#x6210;&#x5458;&#x7684;&#x5408;&#x6210;&#x7248;&#x672C;&#x4F1A;&#x81EA;&#x52A8;&#x628A;&#x8D4B;&#x503C;&#x5BF9;&#x8C61;&#x7684;&#x6BCF;&#x4E2A;&#x975E;&#x9759;&#x6001;&#x6570;&#x636E;&#x6210;&#x5458;&#x8D4B;&#x503C;&#x5230;&#x88AB;&#x8D4B;&#x503C;&#x5BF9;&#x8C61;&#x5BF9;&#x5E94;&#x7684;&#x6210;&#x5458;&#x4E2D;&#x3002;</li>
+<li>&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E0D;&#x7BA1;&#x662F;&#x4E0D;&#x662F;&#x5408;&#x6210;&#x7248;&#x672C;&#xFF0C;&#x5176;&#x90FD;&#x4F1A;&#x5728;&#x8BE5;&#x5BF9;&#x8C61;&#x9500;&#x6BC1;&#x65F6;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#x975E;&#x9759;&#x6001;&#x6570;&#x636E;&#x6210;&#x5458;&#x81EA;&#x5DF1;&#x7684;&#x6790;&#x6784;&#x51FD;&#x6570;&#x3002;</li>
+<li>&#x51FD;&#x6570;&#x4F53;&#x4E3A;&#x7A7A;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x5176;&#x7C7B;&#x578B;&#x4E3A;&#x5B57;&#x9762;&#x503C;&#x7C7B;&#x578B;&#xFF0C;&#x5219;&#x5408;&#x6210;&#x7248;&#x672C;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6210;&#x5458;&#x90FD;&#x4E3A;constexpr&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x4ED6;&#x5408;&#x6210;&#x7684;&#x62F7;&#x8D1D;&#x63A7;&#x5236;&#x6210;&#x5458;&#x5219;&#x4E0D;&#x4E3A;constexpr&#x51FD;&#x6570;&#x3002;</li>
+</ol>
+<p>&#x4EE5;&#x4E0B;&#x4E3A;&#x5404;&#x4E2A;&#x62F7;&#x8D1D;&#x63A7;&#x5236;&#x6210;&#x5458;&#x7684;&#x51FD;&#x6570;&#x58F0;&#x660E;&#xFF0C;&#x5047;&#x8BBE;&#x7C7B;&#x540D;&#x4E3A;<code>Cls</code>&#xFF0C;&#x4E14;&#x542B;&#x6709;&#x67D0;&#x4E9B;&#x975E;&#x9759;&#x6001;&#x6570;&#x636E;&#x6210;&#x5458;&#xFF0C;&#x5219;&#x5176;&#x5408;&#x6210;&#x7684;&#x62F7;&#x8D1D;&#x6210;&#x5458;&#x7684;&#x5B9A;&#x4E49;&#x4E00;&#x822C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span></span>
+<span class="token comment">// &#x5047;&#x8BBE;Cls&#x7684;&#x6210;&#x5458;&#x7ED3;&#x6784;&#x5982;&#x4E0B;</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Cls</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-constexpr">constexpr</span> <span class="token keyword keyword-int">int</span> kIns <span class="token operator">=</span> <span class="token number">48</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> ins_<span class="token punctuation">;</span>
+    <span class="token keyword keyword-double">double</span> dou_<span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>string str_<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     *  &#x4EE5;&#x4E0B;&#x4E3A;&#x7F16;&#x8BD1;&#x5668;&#x53EF;&#x80FD;&#x4F1A;&#x5408;&#x6210;&#x7684;&#x62F7;&#x8D1D;&#x6210;&#x5458;&#x7248;&#x672C;&#x7684;&#x5B9A;&#x4E49;
+     *  // &#x5408;&#x6210;&#x7684;&#x62F7;&#x8D1D;&#x6784;&#x9020;&#x51FD;&#x6570;
+     *  Cls(const Cls&amp; obj): ins_(obj.ins_), dou_(obj.dou_), str_(obj.str_) {}
+     *  // &#x5408;&#x6210;&#x7684;&#x79FB;&#x52A8;&#x6784;&#x9020;&#x51FD;&#x6570;
+     *  Cls(Cls&amp;&amp; obj): ins_(obj.ins_), dou_(obj.dou_), str_(obj.str_) {}
+     *  // &#x5408;&#x6210;&#x7684;&#x62F7;&#x8D1D;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;
+     *  Cls&amp; operator=(const Cls&amp; obj): ins_(obj.ins_), dou_(obj.dou_), str_(obj.str_) {}
+     *  // &#x5408;&#x6210;&#x7684;&#x79FB;&#x52A8;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;
+     *  Cls&amp; operator=(Cls&amp;&amp; obj): ins_(obj.ins_), dou_(obj.dou_), str_(obj.str_) {}
+     *  // &#x5408;&#x6210;&#x7684;&#x6790;&#x6784;&#x51FD;&#x6570;
+     *  ~Cls() {}
+     * 
+     */</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</pre><p>&#x4EE5;&#x4E0B;&#x4E3A;&#x5408;&#x6210;&#x62F7;&#x8D1D;&#x63A7;&#x5236;&#x6210;&#x5458;&#x7684;&#x7279;&#x6027;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token comment">// &#x81EA;&#x5B9A;&#x4E49;&#x7684;delete&#x8FD0;&#x7B97;&#x7B26;&#x51FD;&#x6570;</span>
+<span class="token keyword keyword-void">void</span> <span class="token keyword keyword-operator">operator</span> <span class="token keyword keyword-delete">delete</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span> <span class="token operator">*</span> ptr<span class="token punctuation">)</span> <span class="token keyword keyword-noexcept">noexcept</span>
+<span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;&#x5185;&#x5B58;&#x5DF2;&#x91CA;&#x653E;\n&quot;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// &#x542B;&#x6709;&#x52A8;&#x6001;&#x5185;&#x5B58;&#x5206;&#x914D;&#x7684;&#x975E;&#x9759;&#x6001;&#x6570;&#x636E;&#x6210;&#x5458;</span>
+<span class="token keyword keyword-struct">struct</span> <span class="token class-name">Cls</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-double">double</span> <span class="token operator">*</span>pDou_ <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-double">double</span><span class="token punctuation">{</span><span class="token operator">-</span><span class="token number">12.55</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token operator">~</span><span class="token function">Cls</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword keyword-delete">delete</span> pDou_<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Base</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-int">int</span> ins_<span class="token punctuation">;</span>
+    <span class="token keyword keyword-double">double</span> dou_<span class="token punctuation">;</span>
+    <span class="token comment">// &#x542B;&#x6709;&#x52A8;&#x6001;&#x5185;&#x5B58;&#x5206;&#x914D;&#x7684;&#x975E;&#x9759;&#x6001;&#x6570;&#x636E;&#x6210;&#x5458;</span>
+    Cls obj<span class="token punctuation">;</span>
+<span class="token keyword keyword-public">public</span><span class="token operator">:</span>
+    <span class="token comment">// &#x8F93;&#x51FA;&#x975E;&#x9759;&#x6001;&#x6210;&#x5458;</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">prints</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword keyword-const">const</span>
+    <span class="token punctuation">{</span>
+        std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> ins_ <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+        std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> dou_ <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// &#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+    <span class="token function">Base</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token function">ins_</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">dou_</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">8.2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token comment">// &#x6784;&#x9020;&#x51FD;&#x6570;</span>
+    <span class="token function">Base</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> ins<span class="token punctuation">,</span> <span class="token keyword keyword-double">double</span> dou<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token function">ins_</span><span class="token punctuation">(</span>ins<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">dou_</span><span class="token punctuation">(</span>dou<span class="token punctuation">)</span> <span class="token punctuation">{</span> std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;&#x8C03;&#x7528;&#x666E;&#x901A;&#x6784;&#x9020;&#x51FD;&#x6570;\n&quot;</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token comment">// &#x5408;&#x6210;&#x7684;&#x62F7;&#x8D1D;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+    <span class="token function">Base</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> Base<span class="token operator">&amp;</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token keyword keyword-default">default</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x79FB;&#x52A8;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+    <span class="token function">Base</span><span class="token punctuation">(</span>Base<span class="token operator">&amp;&amp;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;&#x8C03;&#x7528;&#x79FB;&#x52A8;&#x6784;&#x9020;&#x51FD;&#x6570;\n&quot;</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token comment">// &#x62F7;&#x8D1D;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#x51FD;&#x6570;</span>
+    Base<span class="token operator">&amp;</span> <span class="token keyword keyword-operator">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> Base<span class="token operator">&amp;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;&#x8C03;&#x7528;&#x62F7;&#x8D1D;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#x51FD;&#x6570;\n&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-return">return</span> <span class="token operator">*</span><span class="token keyword keyword-this">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// &#x79FB;&#x52A8;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#x51FD;&#x6570;</span>
+    Base<span class="token operator">&amp;</span> <span class="token keyword keyword-operator">operator</span><span class="token operator">=</span><span class="token punctuation">(</span>Base<span class="token operator">&amp;&amp;</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token keyword keyword-default">default</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x6790;&#x6784;&#x51FD;&#x6570;</span>
+    <span class="token operator">~</span><span class="token function">Base</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;&#x8C03;&#x7528;&#x6790;&#x6784;&#x51FD;&#x6570;\n&quot;</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x7531;Base(int, double)&#x6784;&#x9020;</span>
+    Base <span class="token function">obj</span><span class="token punctuation">(</span><span class="token number">48</span><span class="token punctuation">,</span><span class="token number">15.66</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    obj<span class="token punctuation">.</span><span class="token function">prints</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7531;&#x5408;&#x6210;&#x7684;Base(const Base&amp;)&#x6784;&#x9020;&#xFF0C;&#x975E;&#x9759;&#x6001;&#x6570;&#x636E;&#x6210;&#x5458;&#x503C;&#x4E0E;obj&#x4E00;&#x6837;&#x3002;</span>
+    Base obj2<span class="token punctuation">{</span>obj<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    obj2<span class="token punctuation">.</span><span class="token function">prints</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7531;Base(Base&amp;&amp;)&#x6784;&#x9020;&#xFF0C;&#x975E;&#x9759;&#x6001;&#x6570;&#x636E;&#x6210;&#x5458;&#x503C;&#x672A;&#x521D;&#x59CB;&#x5316;&#x3002;</span>
+    Base obj3<span class="token punctuation">{</span>std<span class="token double-colon punctuation">::</span><span class="token function">move</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    obj3<span class="token punctuation">.</span><span class="token function">prints</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7531;Base(int, double)&#x6784;&#x9020;</span>
+    Base <span class="token function">obj4</span><span class="token punctuation">(</span><span class="token number">230</span><span class="token punctuation">,</span><span class="token number">0.55</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7531;Base&amp; operator=(const Base&amp;)&#x6784;&#x9020;&#xFF0C;&#x975E;&#x9759;&#x6001;&#x6570;&#x636E;&#x6210;&#x5458;&#x503C;&#x672A;&#x521D;&#x59CB;&#x5316;&#x3002;</span>
+    obj <span class="token operator">=</span> obj2<span class="token punctuation">;</span>
+    obj<span class="token punctuation">.</span><span class="token function">prints</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7531;&#x5408;&#x6210;&#x7684;Base&amp; operator=(Base&amp;&amp;)&#x6784;&#x9020;&#xFF0C;&#x975E;&#x9759;&#x6001;&#x6570;&#x636E;&#x6210;&#x5458;&#x503C;&#x4E0E;obj4&#x4E00;&#x6837;&#x3002;</span>
+    obj2 <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">move</span><span class="token punctuation">(</span>obj4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    obj2<span class="token punctuation">.</span><span class="token function">prints</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x4E0D;&#x7BA1;&#x662F;&#x4E0D;&#x662F;&#x5408;&#x6210;&#x7248;&#x672C;&#x7684;&#x6790;&#x6784;&#x51FD;&#x6570;&#xFF0C;&#x7ED3;&#x675F;&#x65F6;&#x8BE5;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#x975E;&#x9759;&#x6001;&#x6570;&#x636E;&#x6210;&#x5458;&#x81EA;&#x5DF1;&#x7684;&#x6790;&#x6784;&#x51FD;&#x6570;&#x3002;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token comment">// &#x5B57;&#x9762;&#x503C;&#x7C7B;&#x578B;Base&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4F7F;&#x7528;&#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5730;&#x65B9;&#x8C03;&#x7528;&#x3002;</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Base</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-int">int</span> ins_<span class="token punctuation">;</span>
+    <span class="token keyword keyword-double">double</span> dou_<span class="token punctuation">;</span>
+<span class="token keyword keyword-public">public</span><span class="token operator">:</span>
+    <span class="token comment">// &#x8F93;&#x51FA;&#x975E;&#x9759;&#x6001;&#x6210;&#x5458;</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">prints</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword keyword-const">const</span>
+    <span class="token punctuation">{</span>
+        std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> ins_ <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+        std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> dou_ <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// &#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+    <span class="token keyword keyword-constexpr">constexpr</span> <span class="token function">Base</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token function">ins_</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">dou_</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">8.2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token comment">// &#x6784;&#x9020;&#x51FD;&#x6570;</span>
+    <span class="token keyword keyword-constexpr">constexpr</span> <span class="token function">Base</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> ins<span class="token punctuation">,</span> <span class="token keyword keyword-double">double</span> dou<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token function">ins_</span><span class="token punctuation">(</span>ins<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">dou_</span><span class="token punctuation">(</span>dou<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// &#x7531;constexpr Base(int, double)&#x6784;&#x9020;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4F7F;&#x7528;&#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5730;&#x65B9;&#x8C03;&#x7528;&#x3002;</span>
+    <span class="token keyword keyword-constexpr">constexpr</span> Base <span class="token function">obj</span><span class="token punctuation">(</span><span class="token number">48</span><span class="token punctuation">,</span><span class="token number">15.66</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    obj<span class="token punctuation">.</span><span class="token function">prints</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7531;&#x5408;&#x6210;&#x7684;constexpr Base(const Base&amp;)&#x6784;&#x9020;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4F7F;&#x7528;&#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5730;&#x65B9;&#x8C03;&#x7528;&#x3002;</span>
+    <span class="token keyword keyword-constexpr">constexpr</span> Base obj2<span class="token punctuation">{</span>obj<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    obj2<span class="token punctuation">.</span><span class="token function">prints</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7531;&#x5408;&#x6210;&#x7684;constexpr Base(Base&amp;&amp;)&#x6784;&#x9020;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4F7F;&#x7528;&#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5730;&#x65B9;&#x8C03;&#x7528;&#x3002;</span>
+    <span class="token keyword keyword-constexpr">constexpr</span> Base obj3<span class="token punctuation">{</span>std<span class="token double-colon punctuation">::</span><span class="token function">move</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    obj3<span class="token punctuation">.</span><span class="token function">prints</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// obj4&#x4E0D;&#x4E3A;&#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;</span>
+    Base <span class="token function">obj4</span><span class="token punctuation">(</span><span class="token number">230</span><span class="token punctuation">,</span><span class="token number">0.55</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x7531;&#x5408;&#x6210;&#x7684;Base&amp; operator=(const Base&amp;)&#x6784;&#x9020;&#xFF0C;&#x4E0D;&#x53EF;&#x4EE5;&#x5728;&#x4F7F;&#x7528;&#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5730;&#x65B9;&#x8C03;&#x7528;&#x3002;</span>
+    obj4 <span class="token operator">=</span> obj<span class="token punctuation">;</span>
+    obj4<span class="token punctuation">.</span><span class="token function">prints</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// obj5&#x4E3A;&#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;</span>
+    <span class="token keyword keyword-constexpr">constexpr</span> Base <span class="token function">obj5</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">0.75</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x9519;&#x8BEF;&#xFF1A;&#x5408;&#x6210;&#x7684;Base&amp; operator=(const Base&amp;)&#x4E0D;&#x80FD;&#x5728;&#x4F7F;&#x7528;&#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5730;&#x65B9;&#x8C03;&#x7528;&#x3002;</span>
+    obj5 <span class="token operator">=</span> obj<span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </pre><h4 class="mume-header" id="7951-%E9%9A%90%E5%BC%8F%E5%90%88%E6%88%90%E7%89%88%E6%9C%AC">7.951 &#x9690;&#x5F0F;&#x5408;&#x6210;&#x7248;&#x672C;</h4>
 
 <p>&#x5BF9;&#x4E8E;&#x9664;&#x4E86;&#x79FB;&#x52A8;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x79FB;&#x52A8;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x7C7B;&#x6CA1;&#x6709;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x5BF9;&#x5E94;&#x7684;&#x62F7;&#x8D1D;&#x63A7;&#x5236;&#x6210;&#x5458;&#xFF0C;&#x5219;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x4E3A;&#x5176;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x3002;</p>
