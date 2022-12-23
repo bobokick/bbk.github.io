@@ -615,6 +615,12 @@ std<span class="token double-colon punctuation">::</span>istream<span class="tok
         <span class="token keyword keyword-this">this</span><span class="token operator">-&gt;</span>val_ <span class="token operator">/=</span> obj<span class="token punctuation">.</span>val_<span class="token punctuation">;</span>
         <span class="token keyword keyword-return">return</span> <span class="token operator">*</span><span class="token keyword keyword-this">this</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
+    <span class="token comment">// &#x9664;&#x4F59;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</span>
+    Cls<span class="token operator">&amp;</span> <span class="token keyword keyword-operator">operator</span><span class="token operator">%=</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> Cls<span class="token operator">&amp;</span> obj<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token operator">-&gt;</span>val_ <span class="token operator">%=</span> obj<span class="token punctuation">.</span>val_<span class="token punctuation">;</span>
+        <span class="token keyword keyword-return">return</span> <span class="token operator">*</span><span class="token keyword keyword-this">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -634,6 +640,9 @@ std<span class="token double-colon punctuation">::</span>istream<span class="tok
     obj <span class="token operator">-=</span> obj2<span class="token punctuation">;</span>
     <span class="token comment">// &#x8F93;&#x51FA;5</span>
     std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> obj<span class="token punctuation">.</span>val_ <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+    obj2 <span class="token operator">%=</span> obj<span class="token punctuation">;</span>
+    <span class="token comment">// &#x8F93;&#x51FA;3</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> obj2<span class="token punctuation">.</span>val_ <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
     <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </pre><h2 class="mume-header" id="84-%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6">8.4 &#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;</h2>
@@ -671,6 +680,12 @@ std<span class="token double-colon punctuation">::</span>istream<span class="tok
     Cls<span class="token operator">&amp;</span> <span class="token keyword keyword-operator">operator</span><span class="token operator">/=</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> Cls<span class="token operator">&amp;</span> obj<span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
         <span class="token keyword keyword-this">this</span><span class="token operator">-&gt;</span>val_ <span class="token operator">/=</span> obj<span class="token punctuation">.</span>val_<span class="token punctuation">;</span>
+        <span class="token keyword keyword-return">return</span> <span class="token operator">*</span><span class="token keyword keyword-this">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// &#x9664;&#x4F59;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</span>
+    Cls<span class="token operator">&amp;</span> <span class="token keyword keyword-operator">operator</span><span class="token operator">%=</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> Cls<span class="token operator">&amp;</span> obj<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token operator">-&gt;</span>val_ <span class="token operator">%=</span> obj<span class="token punctuation">.</span>val_<span class="token punctuation">;</span>
         <span class="token keyword keyword-return">return</span> <span class="token operator">*</span><span class="token keyword keyword-this">this</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token comment">// &#x6B63;&#x53F7;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;&#x4E00;&#x5143;&#xFF09;</span>
@@ -719,6 +734,14 @@ Cls <span class="token keyword keyword-operator">operator</span><span class="tok
     <span class="token keyword keyword-return">return</span> res<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
+<span class="token comment">// &#x9664;&#x4F59;&#x8FD0;&#x7B97;&#x7B26;</span>
+Cls <span class="token keyword keyword-operator">operator</span><span class="token operator">%</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> Cls<span class="token operator">&amp;</span> a<span class="token punctuation">,</span> <span class="token keyword keyword-const">const</span> Cls<span class="token operator">&amp;</span> b<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Cls res <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    res <span class="token operator">%=</span> b<span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
 <span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token comment">// &#x7C7B;Cls&#x7684;&#x5BF9;&#x8C61;</span>
@@ -736,6 +759,8 @@ Cls <span class="token keyword keyword-operator">operator</span><span class="tok
     std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>obj <span class="token operator">*</span> obj2<span class="token punctuation">)</span><span class="token punctuation">.</span>val_ <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
     <span class="token comment">// &#x8F93;&#x51FA;0</span>
     std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>obj <span class="token operator">/</span> obj2<span class="token punctuation">)</span><span class="token punctuation">.</span>val_ <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+    <span class="token comment">// &#x8F93;&#x51FA;3</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>obj2 <span class="token operator">%</span> obj<span class="token punctuation">)</span><span class="token punctuation">.</span>val_ <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
     <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </pre><h2 class="mume-header" id="85-%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6">8.5 &#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;</h2>
